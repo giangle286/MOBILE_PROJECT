@@ -1,6 +1,10 @@
 # MOBILE_PROJECT
 Nhóm 8 Đồ án cuối kỳ - Môn học Phát triển thương mại di động
 
+Thông tin làm việc:
+Các bạn nhận task => nêu ý kiến => thực hiện => feedback.
+Cố gắng đúng tiến độ nhé. 
+
 Trải nghiệm app
 
 1. Để có thể bắt đầu sử dụng app, bạn cần:
