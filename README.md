@@ -5,8 +5,8 @@ Thông tin làm việc:
 Các bạn nhận task => nêu ý kiến => thực hiện => feedback.
 Cố gắng đúng tiến độ nhé. 
 
-cú pháp commit/ push lên: Tên trang/ tên luồng logic_Chức năng. Ví dụ: Blogs_add button nha mn
-Mỗi khi đẩy lên: chọn nhánh của tên mình để đẩy => nhấn pull request để review rùi merge nếu k có conflict nha
+#cú pháp commit/ push lên: Tên trang/ tên luồng logic_Chức năng. Ví dụ: Blogs_add button nha mn
+#Mỗi khi đẩy lên: chọn nhánh của tên mình để đẩy => nhấn pull request để review rùi merge nếu k có conflict nha
 
 Trải nghiệm app
 
