@@ -33,16 +33,7 @@
                 android:textStyle="bold|italic"
                 android:paddingBottom="5dp"/>
             <ImageButton
-                android:id="@+id/imvChat"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginLeft="12dp"
-                android:paddingRight="10dp"
-                android:background="#ffffff" android:src="@drawable/ic_baseline_filter_alt_24"
-                android:scaleX="1.5"
-                android:scaleY="1.5"/>
-            <ImageButton
-                android:id="@+id/imvBlog"
+                android:id="@+id/imvFilter"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_marginLeft="12dp"
