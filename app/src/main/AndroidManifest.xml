@@ -13,13 +13,6 @@
         android:theme="@style/Theme.MoroApplication"
         tools:targetApi="31">
         <activity
-            android:name=".Activity_Profile"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".Activity_Deco"
             android:exported="false">
             <meta-data
