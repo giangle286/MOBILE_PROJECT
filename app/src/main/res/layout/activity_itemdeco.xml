@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/sample1" />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/sample2" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="#912A2A"
+                android:padding="5dp"/>
+            <TextView
+                android:id="@+id/txtName1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="#1B7A1F"
+                android:padding="5dp"/>
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/txtUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="User"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="#912A2A"
+                android:padding="5dp"/>
+            <TextView
+                android:id="@+id/txtUser1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="User"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="#1B7A1F"
+                android:padding="5dp"/>
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/txtTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:textColor="#912A2A"
+                android:padding="5dp"/>
+            <TextView
+                android:id="@+id/txtTime1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:textColor="#1B7A1F"
+                android:padding="5dp"/>
+
+        </TableRow>
+
+    </TableLayout>
+</LinearLayout>
