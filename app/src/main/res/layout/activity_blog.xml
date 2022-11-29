@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity_Deco"
+    tools:context=".Activity_Blog"
     android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Thiết kế"
+        android:text="Bản tin"
         android:textSize="25dp"
         android:padding="10dp"
         android:textColor="#993B22"
@@ -29,55 +29,10 @@
             android:id="@+id/inputSearch"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:hint="Search ...."
+            android:hint="Tìm kiếm ...."
             android:background="@drawable/stroke"/>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="5dp">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:src="@drawable/ic_baseline_filter_alt_24" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
-            android:padding="5dp"
-            android:textSize="14dp"
-            android:text="Vintage"
-            android:backgroundTint="#912C11"
-            android:background="@drawable/stroke"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="2"
-            android:backgroundTint="#993B22"
-            android:gravity="center"
-            android:text="Tối giản"
-            android:background="@drawable/stroke"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="10dp"
-            android:layout_weight="3"
-            android:backgroundTint="#993B22"
-            android:padding="5dp"
-            android:text="Đăng tin"
-            android:background="@drawable/stroke"/>
-    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -99,11 +54,11 @@
             android:layout_marginRight="10dp"/>
     </LinearLayout>
     <ListView
-        android:id="@+id/lv_decosample"
+        android:id="@+id/lv_blogsample"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    
+
 
 
 </LinearLayout>
