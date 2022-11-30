@@ -9,18 +9,30 @@
 
   <androidx.constraintlayout.widget.ConstraintLayout
       android:id="@+id/header_container"
+<<<<<<< HEAD
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+=======
+      android:layout_width="411dp"
+      android:layout_height="44dp"
+>>>>>>> origin/master
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="1.0"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent">
 
     <ImageView
+<<<<<<< HEAD
         android:id="@+id/imvBack"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginLeft="30dp"
+=======
+        android:id="@+id/imv_Back"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="28dp"
+>>>>>>> origin/master
         android:src="@drawable/ic_baseline_arrow_back_ios_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,6 +42,7 @@
         android:id="@+id/txtCart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginTop="12dp"
         android:fontFamily="@font/sourcesanspro_bold"
         android:text="Thanh toán"
@@ -39,6 +52,17 @@
         app:layout_constraintEnd_toStartOf="@+id/btnChat"
         app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toEndOf="@+id/imvBack"
+=======
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="196dp"
+        android:fontFamily="@font/sourcesanspro_bold"
+        android:text="Thanh toán"
+        android:textColor="#993E22"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btnChat"
+        app:layout_constraintHorizontal_bias="0.051"
+>>>>>>> origin/master
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
@@ -62,6 +86,10 @@
         android:layout_marginTop="15dp"
         android:background="#12000000"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
+=======
+        app:layout_constraintHorizontal_bias="0.0"
+>>>>>>> origin/master
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCart" />
   </androidx.constraintlayout.widget.ConstraintLayout>
@@ -99,18 +127,29 @@
           <ImageView
               android:layout_width="16dp"
               android:layout_height="16dp"
+<<<<<<< HEAD
               android:src="@drawable/img_ava">
+=======
+              android:src="@drawable/ic_baseline_edit_24">
+>>>>>>> origin/master
 
           </ImageView>
           <TextView
               android:layout_marginLeft="8dp"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
+<<<<<<< HEAD
               android:text="Thông tin của Sen :"
               android:textColor="#ff9989"
               android:textSize="16sp"
               android:fontFamily="@font/sourcesanspro_bold">
 
+=======
+              android:text="Thông tin sản phẩm:"
+              android:textColor="#993E22"
+              android:textSize="16sp"
+              android:fontFamily="@font/sourcesanspro_bold">
+>>>>>>> origin/master
           </TextView>
 
         </LinearLayout>
@@ -121,6 +160,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
           <TextView
+<<<<<<< HEAD
 
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
@@ -130,6 +170,25 @@
 
           </TextView>
 
+=======
+              android:id="@+id/txt_finish_service"
+              android:layout_width="wrap_content"
+              android:textStyle="italic"
+              android:layout_height="wrap_content"
+              android:text="Gói đăng tin phòng trọ:"
+              android:textColor="#993E22"
+              android:textSize="16sp">
+          </TextView>
+          <TextView
+              android:id="@+id/txt_valid_service"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="3 ngày"
+              android:layout_marginLeft="5dp"
+              android:textColor="#993E22"
+              android:textSize="16sp">
+          </TextView>
+>>>>>>> origin/master
 
         </LinearLayout>
         <LinearLayout
@@ -139,6 +198,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
           <TextView
+<<<<<<< HEAD
 
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
@@ -152,10 +212,24 @@
               android:id="@+id/btnTransfer"
               android:layout_width="7dp"
               android:layout_height="15dp"
+=======
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:textColor="#993e22"
+              android:text="028822848"
+              android:textSize="16sp">
+          </TextView>
+          <ImageButton
+              android:id="@+id/btn_Edit_phonenumb_payment"
+              android:layout_width="20dp"
+              android:layout_height="20dp"
+>>>>>>> origin/master
               android:layout_gravity="center_vertical"
               android:layout_marginEnd="12dp"
               android:background="#00000000"
               android:scaleType="fitXY"
+<<<<<<< HEAD
               android:src="@drawable/img_ava"
               />
 
@@ -178,6 +252,11 @@
 
         </LinearLayout>
 
+=======
+              android:src="@drawable/ic_baseline_edit_24" />
+
+        </LinearLayout>
+>>>>>>> origin/master
 
       </LinearLayout>
       <LinearLayout
