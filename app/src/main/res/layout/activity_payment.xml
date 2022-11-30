@@ -30,13 +30,14 @@
         android:id="@+id/txtCart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/sourcesanspro_bold"
         android:text="Thanh toán"
-        android:textColor="#99E322"
+        android:textColor="#993E22"
         android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/btnChat"
+        app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toEndOf="@+id/imvBack"
         app:layout_constraintTop_toTopOf="parent" />
 
