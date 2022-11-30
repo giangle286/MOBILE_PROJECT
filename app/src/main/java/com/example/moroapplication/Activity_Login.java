@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.database.AccountDB;
 import com.facebook.AccessToken;
 import com.facebook.AccessTokenTracker;
 import com.facebook.CallbackManager;
@@ -54,7 +55,7 @@ public class Activity_Login extends AppCompatActivity {
     //    ImageView imvBack;
     TextView txtForgotPass, txtRegister;
     FrameLayout btnLogin, FB, GG;
-    //        AccountDB DB;
+            AccountDB DB;
     TextInputEditText edtEmail, edtPass;
     CheckBox chkRemember;
     Dialog dialogWait;

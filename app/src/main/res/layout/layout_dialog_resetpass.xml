@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity_Register"
     android:orientation="vertical">
 
     <ImageView
@@ -33,13 +32,13 @@
                 android:src="@drawable/img_email"
                 android:layout_gravity="center">
             </ImageView>
-            <EditText
-                android:id="@+id/edt_email"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtEmailMk"
                 android:layout_width="270dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:hint="Email "
-                ></EditText>
+                android:hint="Email"
+                ></com.google.android.material.textfield.TextInputEditText>
         </LinearLayout>
 
         <LinearLayout
@@ -55,15 +54,18 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:src="@drawable/img_key"></ImageView>
-            <EditText
-                android:id="@+id/edt_password"
-                android:layout_width="270dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:hint="Mật khẩu"
-                android:inputType="textPassword"
 
-                ></EditText>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtMk"
+                android:layout_width="270dp"
+                android:layout_height="match_parent"
+                android:inputType="textPassword"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:paddingTop="8dp"
+                android:hint="Mật khẩu mới"
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -78,23 +80,26 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:src="@drawable/img_key"></ImageView>
-            <EditText
-                android:id="@+id/edt_re_password"
-                android:layout_width="270dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:hint="Nhập lại mật khẩu"
-                android:inputType="textPassword"
 
-                ></EditText>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtReMk"
+                android:layout_width="270dp"
+                android:layout_height="match_parent"
+                android:inputType="textPassword"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:hint="Nhập lại mật khẩu"
+                android:paddingTop="8dp"
+                />
+
         </LinearLayout>
 
         <Button
-            android:id="@+id/btn_register"
+            android:id="@+id/btn_rePass"
             android:layout_width="270dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Đăng Ký"
+            android:text="Đổi mật khẩu"
             android:textSize="20dp"
             android:backgroundTint="#C6803801"
             android:layout_margin="40sp"
