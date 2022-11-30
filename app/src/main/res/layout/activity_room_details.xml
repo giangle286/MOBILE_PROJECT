@@ -10,212 +10,238 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="670dp">
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
             <ImageView
-        android:id="@+id/imv_roomImage"
-        android:layout_width="match_parent"
-        android:layout_height="230dp"
-        android:scaleType="centerCrop"
-        android:padding="10dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/sample1" />
-
-    <TextView
-        android:id="@+id/txt_Title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="Căn hộ cho thuê quận 11"
-        android:textColor="@color/black"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:fontFamily="@font/sourcesanspro_bold"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="10dp">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/ic_baseline_attach_money_24"
-                android:layout_marginRight="3dp"/>
-            <TextView
-                android:id="@+id/txt_price_room"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="3,5 triệu/ tháng"
-                android:textSize="18sp"
-                android:textColor="#3E1A0A"/>
-            <LinearLayout
+                android:id="@+id/imv_roomImage"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="end">
-
-                <ImageButton
-                    android:id="@+id/imv_chat_room"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:background="@drawable/ic_baseline_chat_bubble_outline_24"
-                    android:layout_marginRight="8dp"/>
-                <CheckBox
-                    android:id="@+id/btn_like_room"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:scaleX="0.8"
-                    android:layout_marginRight="8dp"
-                    android:button="@null"
-                    android:background="@drawable/selector_tym"
-                    android:checked="false"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/ic_baseline_save_alt_24"
-                android:id="@+id/imv_save"
-                android:scaleX="1.5"
-                android:scaleY="1.5"/>
-            </LinearLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:orientation="horizontal"
-            android:layout_marginTop="3dp">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/ic_home_black_24dp"
-                android:layout_marginRight="3dp"/>
+                android:layout_height="230dp"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/sample1" />
 
             <TextView
-                android:id="@+id/txt_square_metre"
+                android:id="@+id/txt_Title"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="20m2"
-                android:textColor="#3E1A0A"
-                android:textSize="20sp" />
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:text="Căn hộ cho thuê quận 11"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="end">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent" android:src="@drawable/img_phone"
-                    android:id="@+id/imv_call" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-                <Button
-                    android:id="@+id/btn_phone_number_room"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:src="@drawable/ic_baseline_attach_money_24" />
+
+                    <TextView
+                        android:id="@+id/txt_price_room"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="3,5 triệu/ tháng"
+                        android:textColor="#3E1A0A"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/imv_chat_room"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/ic_baseline_chat_bubble_outline_24" />
+
+                        <CheckBox
+                            android:id="@+id/btn_like_room"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/selector_tym"
+                            android:button="@null"
+                            android:checked="false"
+                            android:scaleX="0.8"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/imv_save"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:scaleX="1.5"
+                            android:scaleY="1.5"
+                            android:src="@drawable/ic_baseline_save_alt_24" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:src="@drawable/ic_home_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/txt_square_metre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:text="20m2"
+                        android:textColor="#3E1A0A"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imv_call"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
+                            android:src="@drawable/img_phone" />
+
+                        <Button
+                            android:id="@+id/btn_phone_number_room"
+                            style="?android:attr/borderlessButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0332204584"
+                            android:textColor="#993B22"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:src="@drawable/ic_baseline_people_alt_24" />
+
+                    <TextView
+                        android:id="@+id/txt_numberPeople_room"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:text="3 người"
+                        android:textColor="#3E1A0A"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imv_userRoom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_baseline_account_circle_24" />
+
+                        <Button
+                            android:id="@+id/btn_ownRoom"
+                            style="?android:attr/borderlessButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nhà trọ Kiệt"
+                            android:textColor="#993B22"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="0332204584"
-                    android:textColor="#993B22" />
-            </LinearLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:orientation="horizontal"
-            android:layout_marginTop="3dp">
+                    android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/ic_baseline_people_alt_24"
-                android:layout_marginRight="3dp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:src="@drawable/ic_baseline_location_on_24" />
 
-            <TextView
-                android:id="@+id/txt_numberPeople_room"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="3 người"
-                android:textColor="#3E1A0A"
-                android:textSize="20sp" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="end">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent" android:src="@drawable/ic_baseline_account_circle_24"
-                    android:id="@+id/imv_userRoom" />
-
-                <Button
-                    android:id="@+id/btn_ownRoom"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nhà trọ Kiệt"
-                    android:textColor="#993B22" />
+                    <TextView
+                        android:id="@+id/txt_address_room"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="169/80, Võ Văn Ngân, Phường Bình Thọ, Thủ Đức"
+                        android:textColor="#3E1A0A"
+                        android:textSize="15sp" />
+                </LinearLayout>
             </LinearLayout>
 
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="3dp">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/ic_baseline_location_on_24"
-                android:layout_marginRight="3dp" />
-
             <TextView
-                android:id="@+id/txt_address_room"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="169/80, Võ Văn Ngân, Phường Bình Thọ, Thủ Đức"
-                android:textColor="#3E1A0A"
-                android:textSize="15sp" />
-        </LinearLayout>
-    </LinearLayout>
-            <TextView
+                style="@style/Base.CardView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
                 android:text="Thông tin chi tiết"
                 android:textColor="#993E22"
-                android:textStyle="bold"
-                style="@style/Base.CardView"
                 android:textSize="18sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/describe" />
 
-    <TextView
-        android:textColor="#373737"
-        android:id="@+id/txt_Description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:lineSpacingExtra="8sp"
-        android:text="Tùy theo nhu cầu thuê trọ của mỗi người, để đánh giá được một phòng trọ có chất lượng tốt hay không thì phải dựa trên nhiều tiêu chí khác nhau. Trong bài viết này, Moro sẽ nêu ra 6 tiêu chí quan trọng để đánh giá chất lượng của một căn phòng trọ, các bạn trong quá trình đi tìm thuê nhà trọ có thể xem tham khảo và áp dụng để chọn lọc thuê cho mình một căn phòng trọ tốt, phù hợp với nhu cầu bản thân. Tùy theo nhu cầu thuê trọ của mỗi người, để đánh giá được một phòng trọ có chất lượng tốt hay không thì phải dựa trên nhiều tiêu chí khác nhau. Trong bài viết này, Moro sẽ nêu ra 6 tiêu chí quan trọng để đánh giá chất lượng của một căn phòng trọ, các bạn trong quá trình đi tìm thuê nhà trọ có thể xem tham khảo và áp dụng để chọn lọc thuê cho mình một căn phòng trọ tốt, phù hợp với nhu cầu bản thân.Tùy theo nhu cầu thuê trọ của mỗi người, để đánh giá được một phòng trọ có chất lượng tốt hay không thì phải dựa trên nhiều tiêu chí khác nhau. Trong bài viết này, Moro sẽ nêu ra 6 tiêu chí quan trọng để đánh giá chất lượng của một căn phòng trọ, các bạn trong quá trình đi tìm thuê nhà trọ có thể xem tham khảo và áp dụng để chọn lọc thuê cho mình một căn phòng trọ tốt, phù hợp với nhu cầu bản thân." />
+            <TextView
+                android:id="@+id/txt_Description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:lineSpacingExtra="8sp"
+                android:text="Tùy theo nhu cầu thuê trọ của mỗi người, để đánh giá được một phòng trọ có chất lượng tốt hay không thì phải dựa trên nhiều tiêu chí khác nhau. Trong bài viết này, Moro sẽ nêu ra 6 tiêu chí quan trọng để đánh giá chất lượng của một căn phòng trọ, các bạn trong quá trình đi tìm thuê nhà trọ có thể xem tham khảo và áp dụng để chọn lọc thuê cho mình một căn phòng trọ tốt, phù hợp với nhu cầu bản thân. Tùy theo nhu cầu thuê trọ của mỗi người, để đánh giá được một phòng trọ có chất lượng tốt hay không thì phải dựa trên nhiều tiêu chí khác nhau. Trong bài viết này, Moro sẽ nêu ra 6 tiêu chí quan trọng để đánh giá chất lượng của một căn phòng trọ, các bạn trong quá trình đi tìm thuê nhà trọ có thể xem tham khảo và áp dụng để chọn lọc thuê cho mình một căn phòng trọ tốt, phù hợp với nhu cầu bản thân.Tùy theo nhu cầu thuê trọ của mỗi người, để đánh giá được một phòng trọ có chất lượng tốt hay không thì phải dựa trên nhiều tiêu chí khác nhau. Trong bài viết này, Moro sẽ nêu ra 6 tiêu chí quan trọng để đánh giá chất lượng của một căn phòng trọ, các bạn trong quá trình đi tìm thuê nhà trọ có thể xem tham khảo và áp dụng để chọn lọc thuê cho mình một căn phòng trọ tốt, phù hợp với nhu cầu bản thân."
+                android:textColor="#373737" />
 
 
         </LinearLayout>
 
     </ScrollView>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -248,10 +274,10 @@
             android:id="@+id/btn_cmt"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginLeft="6dp"
             android:layout_marginEnd="12dp"
             android:background="@drawable/edittext_button_style_rounded"
-            android:text="Đăng"
-            android:layout_marginLeft="6dp"/>
+            android:text="Đăng" />
 
     </LinearLayout>
 </LinearLayout>
