@@ -16,7 +16,23 @@
       android:layout_gravity="left"
       android:textStyle="bold"
       android:textColor="@color/purple_700"
-      android:layout_marginTop="15dp"/>
+      android:layout_marginTop="15dp"
+      android:layout_marginLeft="10dp"/>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:padding="5dp"
+      android:layout_marginTop="5dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thông báo mới nhất "
+        android:gravity="left"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"/>
+
+  </LinearLayout>
   <ListView
       android:id="@+id/lvNotification"
       android:layout_width="match_parent"
