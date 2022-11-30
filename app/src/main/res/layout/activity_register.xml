@@ -9,20 +9,23 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="285dp"
         android:src="@drawable/img_logo"></ImageView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:background="@drawable/img_rec"
+        android:padding="40dp"
         >
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:background="#FADCBD">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -43,7 +46,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:background="#FADCBD"
+            android:layout_margin="20dp">
 
             <ImageView
                 android:layout_width="25dp"
@@ -57,7 +62,7 @@
                 android:layout_gravity="center"
                 android:hint="Mật khẩu"
                 android:inputType="textPassword"
-                android:paddingTop="20dp"
+
                 ></EditText>
         </LinearLayout>
 
@@ -65,7 +70,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:background="#FADCBD">
 
             <ImageView
                 android:layout_width="25dp"
@@ -79,7 +85,7 @@
                 android:layout_gravity="center"
                 android:hint="Nhập lại mật khẩu"
                 android:inputType="textPassword"
-                android:paddingTop="20dp"
+
                 ></EditText>
         </LinearLayout>
 
@@ -91,6 +97,7 @@
             android:text="Đăng Ký"
             android:textSize="20dp"
             android:backgroundTint="#C6803801"
+            android:layout_margin="40sp"
             >
         </Button>
 
