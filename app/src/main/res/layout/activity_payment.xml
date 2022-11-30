@@ -100,7 +100,7 @@
           <ImageView
               android:layout_width="16dp"
               android:layout_height="16dp"
-              android:src="@drawable/ic_gps">
+              android:src="@drawable/ic_baseline_edit_24">
 
           </ImageView>
           <TextView
