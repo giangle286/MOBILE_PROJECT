@@ -64,12 +64,12 @@ public class Activity_Notification extends AppCompatActivity {
 
     private void initData() {
         notifications = new ArrayList<>();
-        notifications.add(new com.example.models.Notification("Bạn còn 1 tiếng trước buổi học C11 của giảng viên Trần Thoa"));
-        notifications.add(new com.example.models.Notification("Bạn còn 1 ngày trước buổi học D11 của giảng viên Nguyễn Minh Minh"));
-        notifications.add(new com.example.models.Notification("Tài khoản Premium của bạn đã được update thành công"));
-        notifications.add(new com.example.models.Notification("Cảm ơn bạn đã đánh giá giảng viên. Những feedback của bạn sẽ giúp cho team hoạt động tốt hơn"));
-        notifications.add(new com.example.models.Notification("Giảng viên Phạm Minh Trọng đã update tài liệu sau buổi học ngày 28/11/2021. Chúc bạn học tập vui vẻ."));
-        notifications.add(new com.example.models.Notification("Giảng viên Phạm Long Thuyên đã update tài liệu sau buổi học ngày 1/11/2021. Chúc bạn học tập vui vẻ."));
+        notifications.add(new com.example.models.Notification("Mỹ Lệ Trần đã thích bài viết của bạn"));
+        notifications.add(new com.example.models.Notification("Bảo Ngọc đã bình luận bài viết của bạn"));
+        notifications.add(new com.example.models.Notification("Bạn vừa tải lên một bài viết"));
+        notifications.add(new com.example.models.Notification("Nguyễn Lý và 3 người khác đã thích bài viết của bạn"));
+        notifications.add(new com.example.models.Notification("Mai Mai đã gửi một tin nhắn đến Nhóm nhà trọ 777"));
+        notifications.add(new com.example.models.Notification("Lý Lệ Tuyền đã thích bài viết của bạn"));
         notificationAdapter = new NotificationAdapter(this, notifications);
         lvNotification.setAdapter(notificationAdapter);
     }
