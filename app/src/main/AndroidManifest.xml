@@ -34,6 +34,20 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".Activity_Deco_Details"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity_Loading"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Activity_Login"
             android:exported="false">
             <meta-data
@@ -82,6 +96,41 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+         <activity
+            android:name=".Activity_Profile_Detail2"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+         <activity
+            android:name=".Activity_Profile_Detai3"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+         <activity
+            android:name=".Activity_Profile_Detail4"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+         <activity
+            android:name=".Activity_Profile_Detail5"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+         <activity
+            android:name=".Activity_Profile_Detail6"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".Activity_Register"
             android:exported="false">
@@ -89,21 +138,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".Activity_Success_Register"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".Activity_Deco_Details"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
+         <activity
             android:name=".Activity_Room_Details"
             android:exported="false">
             <meta-data
@@ -113,6 +148,13 @@
         <activity
             android:name=".Activity_SharedRoom_Details"
              android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity_Success_Register"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -132,14 +174,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
-
-
-
-
-
-
-
         <activity
             android:name=".HomePage"
             android:exported="true">
