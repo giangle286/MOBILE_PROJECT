@@ -1,114 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity_Deco"
-    android:orientation="vertical">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Thiết kế"
-        android:textSize="25dp"
-        android:padding="10dp"
-        android:textColor="#993B22"
-        android:textStyle="bold"
-        android:gravity="top"/>
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activity_Deco">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="5dp"
-        android:weightSum="10">
-
-        <EditText
-            android:id="@+id/inputSearch"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:hint="Search ...."
-            android:background="@drawable/stroke"
-            android:layout_weight="9">
-        </EditText>
-        <android.widget.SearchView
-            android:id="@+id/simpleSearchView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="5dp">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:src="@drawable/ic_baseline_filter_alt_24" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
-            android:padding="5dp"
-            android:textSize="14dp"
-            android:text="Vintage"
-            android:backgroundTint="#912C11"
-            android:background="@drawable/stroke"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="2"
-            android:backgroundTint="#993B22"
-            android:gravity="center"
-            android:text="Tối giản"
-            android:background="@drawable/stroke"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="10dp"
-            android:layout_weight="3"
-            android:backgroundTint="#993B22"
-            android:padding="5dp"
-            android:text="Đăng tin"
-            android:background="@drawable/stroke"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="5dp">
+        android:orientation="vertical">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bài đăng mới nhất "
-            android:gravity="left"
-            android:textStyle="bold"
-            android:layout_marginLeft="10dp"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Xem thêm"
-            android:gravity="right"
+            android:text="Thiết kế"
+            android:textSize="22dp"
+            android:padding="5dp"
             android:textColor="#993B22"
-            android:layout_marginRight="10dp"/>
+            android:textStyle="bold"
+            android:gravity="top"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="2dp"
+            android:weightSum="10">
+            <android.widget.SearchView
+                android:id="@+id/simpleSearchView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <EditText
+                android:id="@+id/inputSearch"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Search ...."
+                android:background="@drawable/stroke"
+                android:layout_weight="9">
+            </EditText>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_baseline_filter_alt_24" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:textSize="14dp"
+                android:text="Vintage"
+                android:backgroundTint="#912C11"
+                android:background="@drawable/stroke"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="2"
+                android:backgroundTint="#993B22"
+                android:gravity="center"
+                android:text="Tối giản"
+                android:background="@drawable/stroke"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="3"
+                android:backgroundTint="#993B22"
+                android:padding="5dp"
+                android:text="Đăng tin"
+                android:background="@drawable/stroke"/>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_decoCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
     </LinearLayout>
-    <ListView
-        android:id="@+id/lv_decosample"
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/menu_navigation"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_marginTop="685dp"
+        android:layout_height="50dp"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@color/purple_700"
+        app:itemTextColor="@color/black"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu"></com.google.android.material.bottomnavigation.BottomNavigationView>
 
-    
+
+    <!--    <LinearLayout-->
+<!--        android:layout_marginTop="80dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:padding="5dp">-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Bài đăng mới nhất "-->
+<!--            android:gravity="left"-->
+<!--            android:textStyle="bold"-->
+<!--            android:layout_marginLeft="10dp"/>-->
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:text="Xem thêm"-->
+<!--            android:gravity="right"-->
+<!--            android:textColor="#993B22"-->
+<!--            android:layout_marginRight="10dp"/>-->
+<!--    </LinearLayout>-->
 
 
-</LinearLayout>
+
+</RelativeLayout>
