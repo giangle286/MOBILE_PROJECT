@@ -125,6 +125,20 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".Activity_Success_Register"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity_Deco_Details"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Activity_Room_Details"
             android:exported="false">
             <meta-data
