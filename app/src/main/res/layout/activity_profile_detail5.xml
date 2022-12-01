@@ -20,7 +20,8 @@
             android:text="Tài khoản"
             android:textColor="#860000"
             android:textStyle="bold"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:textSize="23sp">
         </TextView>
     </LinearLayout>
     <ListView
@@ -30,3 +31,4 @@
         android:layout_marginTop="10dp">
     </ListView>
 </LinearLayout>
+
