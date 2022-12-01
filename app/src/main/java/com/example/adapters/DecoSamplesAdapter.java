@@ -45,7 +45,7 @@ public class DecoSamplesAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
 //        get view: liên kết ánh xạ view để đổ dữ liệu lên
-//        Link views and binding data
+        // link view and binding data
         ViewHolder holder;
         if(view==null){
 //            Link views
@@ -69,6 +69,7 @@ public class DecoSamplesAdapter extends BaseAdapter {
     }
     public static class ViewHolder{
         ImageView imvDecoSamples;
+
 
     }
 
