@@ -9,7 +9,10 @@
     android:background="@drawable/loadingscreen">
 
     <ImageView
+<<<<<<< HEAD
         android:id="@+id/imv_logoloading"
+=======
+>>>>>>> db09388 (LoadingScreen_Complete)
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:src="@drawable/img_logo"></ImageView>
