@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,6 +16,7 @@ import com.example.moroapplication.R;
 import java.util.ArrayList;
 
 public class NotificationAdapter extends BaseAdapter {
+
     private Activity context;
     ArrayList<Notification> notifications;
 
@@ -47,17 +49,21 @@ public class NotificationAdapter extends BaseAdapter {
             LayoutInflater inflater = context.getLayoutInflater();
             view = inflater.inflate(R.layout.itemlist_notification, null);
             holder.txtNotification = view.findViewById(R.id.txtNotification);
+            holder.imvNotification = view.findViewById(R.id.imv_Notification);
             view.setTag(holder);
         }else {
             holder = (NotificationAdapter.ViewHolder) view.getTag();
 
         }
-        holder.txtNotification.setText(notifications.get(i).getNotification());
+        holder.txtNotification.setText(notifications.get(i).getNotificationTitle());
+        holder.imvNotification.setImageResource(notifications.get(i).getNotificationThumb());
+//
         return view;
     }
 
     public static class ViewHolder {
         TextView txtNotification;
+        ImageView imvNotification;
 
 
     }
