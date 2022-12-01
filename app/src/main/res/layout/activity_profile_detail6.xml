@@ -1,7 +1,8 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_gravity="center"
     android:orientation="vertical"
     android:padding="10dp">
@@ -24,11 +25,34 @@
             android:textSize="23sp">
         </TextView>
     </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="Báo cáo tổng quan"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        >
+    </TextView>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:src="@drawable/img_chart_dashboard">
+    </ImageView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lịch sử bài viết"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        >
+    </TextView>
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/lv_Account_Management"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="5dp"
+        >
     </ListView>
 </LinearLayout>
 
