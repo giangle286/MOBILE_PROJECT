@@ -69,10 +69,11 @@ public class Activity_Login extends AppCompatActivity {
         txtForgotPass = findViewById(R.id.txtForgotPass);
         txtRegister = findViewById(R.id.txtRegister);
         btnLogin = findViewById(R.id.btnLogin);
+        chkRemember = findViewById(R.id.chkRemember);
         edtEmail = findViewById(R.id.edtEmail);
         edtPass = findViewById(R.id.edtPass);
         btnFb = findViewById(R.id.btnFb);
-//        DB = new AccountDB(this);
+        DB = new AccountDB(this);
         FB = findViewById(R.id.FB);
         GG = findViewById(R.id.GG);
 
@@ -91,17 +92,17 @@ public class Activity_Login extends AppCompatActivity {
             btnFb.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
                 @Override
                 public void onSuccess(LoginResult loginResult) {
-                    Log.d("GaMi","Đăng nhập thành công!" );
+                    Log.d("Moro","Đăng nhập thành công!" );
                 }
 
                 @Override
                 public void onCancel() {
-                    Log.d("GaMi","Hủy" );
+                    Log.d("Moro","Hủy" );
                 }
 
                 @Override
                 public void onError(FacebookException exception) {
-                    Log.d("GaMi","Đăng nhập không thành công" );
+                    Log.d("Moro","Đăng nhập không thành công" );
                 }
             });
             LoginManager.getInstance().logOut();
