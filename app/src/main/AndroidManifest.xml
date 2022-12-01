@@ -13,6 +13,27 @@
         android:theme="@style/Theme.MoroApplication"
         tools:targetApi="31">
         <activity
+            android:name=".Activity_Payment_Details"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity_SharedRoom_Details"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".HomePage"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Activity_Blog"
             android:exported="false">
             <meta-data
@@ -20,35 +41,14 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Activity_Blog_Details"
+            android:name=".nhap"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Activity_Deco"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".Activity_Login"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".Activity_Message"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".Activity_Notification"
+            android:name=".MainActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -62,7 +62,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Activity_Payment_Details"
+            android:name=".Activity_Blog_Details"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -76,7 +76,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Activity_Profile_Detail1"
+            android:name=".Activity_Deco"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -90,6 +90,13 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".Activity_Login"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Activity_Room_Details"
             android:exported="false">
             <meta-data
@@ -97,37 +104,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Activity_SharedRoom_Details"
-             android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-
-        <activity
-            android:name=".nhap"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".MainActivity"
-          android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-
-
-
-
-
-
-
-
-        <activity
-            android:name=".HomePage"
+            android:name=".Activity_Notification"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
