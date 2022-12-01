@@ -9,7 +9,7 @@
         app:cardCornerRadius="15dp">
 
         <ImageView
-            android:id="@+id/imv_DecoSampleshhjh"
+            android:id="@+id/imv_DecoSamples"
             android:scaleType="centerCrop"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
