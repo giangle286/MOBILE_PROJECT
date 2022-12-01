@@ -14,7 +14,6 @@ import com.example.database.AccountDB;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class Activity_Register extends AppCompatActivity {
-
     TextView txtLogin;
     //    ImageView imvBack;
     FrameLayout btnRegister;

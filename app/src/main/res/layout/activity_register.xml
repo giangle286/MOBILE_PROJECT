@@ -39,7 +39,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center"
@@ -51,7 +51,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/img_email"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                android:padding="5dp">
             </ImageView>
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtEmail"
@@ -65,7 +66,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center"
@@ -73,10 +74,12 @@
             android:layout_margin="20dp">
 
             <ImageView
-                android:layout_width="25dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:src="@drawable/img_key"></ImageView>
+                android:src="@drawable/img_key"
+                android:padding="5dp"
+                ></ImageView>
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtPass"
                 android:layout_width="270dp"
@@ -90,17 +93,18 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center"
             android:background="#FADCBD">
 
             <ImageView
-                android:layout_width="25dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:src="@drawable/img_key"></ImageView>
+                android:src="@drawable/img_key"
+                android:padding="5dp"></ImageView>
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtPassAgain"
                 android:layout_width="270dp"
@@ -116,7 +120,7 @@
 
         <Button
             android:id="@+id/btnRegister"
-            android:layout_width="270dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Đăng ký"
@@ -125,9 +129,6 @@
             android:layout_marginTop="20dp"
             >
         </Button>
-
-
-
 
     </LinearLayout>
 
