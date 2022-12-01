@@ -4,14 +4,14 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Activity_Success_Register extends AppCompatActivity {
 
-    ImageView imvBack;
+    Button btnback;
     FrameLayout btnGetStart;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,18 +23,19 @@ public class Activity_Success_Register extends AppCompatActivity {
 
     @SuppressLint("WrongViewCast")
     private void linkViews() {
-        imvBack=findViewById(R.id.imvBack);
+        btnback = findViewById(R.id.btn_back);
         btnGetStart=findViewById(R.id.btnGetStart);
     }
 
     private void addEvents() {
-        imvBack.setOnClickListener(new View.OnClickListener() {
+        btnback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Activity_Success_Register.this, Activity_Register.class);
+                Intent intent = new Intent(Activity_Success_Register.this,Activity_Register.class);
                 startActivity(intent);
             }
         });
+
         btnGetStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
