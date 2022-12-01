@@ -26,6 +26,13 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".Activity_Choose_Service_Roommate"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Activity_Deco"
             android:exported="false">
             <meta-data
