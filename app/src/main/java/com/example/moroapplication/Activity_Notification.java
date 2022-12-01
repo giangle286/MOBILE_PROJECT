@@ -64,13 +64,17 @@ public class Activity_Notification extends AppCompatActivity {
 
     private void initData() {
         notifications = new ArrayList<>();
-        notifications.add(new com.example.models.Notification("Mỹ Lệ Trần đã thích bài viết của bạn"));
-        notifications.add(new com.example.models.Notification("Bảo Ngọc đã bình luận bài viết của bạn"));
-        notifications.add(new com.example.models.Notification("Bạn vừa tải lên một bài viết"));
-        notifications.add(new com.example.models.Notification("Nguyễn Lý và 3 người khác đã thích bài viết của bạn"));
-        notifications.add(new com.example.models.Notification("Mai Mai đã gửi một tin nhắn đến Nhóm nhà trọ 777"));
-        notifications.add(new com.example.models.Notification("Lý Lệ Tuyền đã thích bài viết của bạn"));
-        notificationAdapter = new NotificationAdapter(this, notifications);
+        notifications.add(new com.example.models.Notification(R.drawable.ngoc,"Mỹ Lệ Trần thích bài viết của bạn"));
+        notifications.add(new com.example.models.Notification(R.drawable.ic_baseline_upload_24,"Bạn vừa tải lên một bài viết"));
+        notifications.add(new com.example.models.Notification(R.drawable.ngocchau,"Hoa hậu Ngọc Châu và 3 người khác đã thích bài viết của bạn"));notifications.add(new com.example.models.Notification(R.drawable.ic_baseline_message_24,"Mai Mai đã gửi một tin nhắn đến Nhóm nhà trọ 777"));notifications.add(new com.example.models.Notification(R.drawable.animegirl,"Lý Lệ Tuyền đã thích bài viết của bạn"));notifications.add(new com.example.models.Notification(R.drawable.girl,"O Sen đã bình luận bài viết của bạn"));notifications.add(new com.example.models.Notification(R.drawable.ic_baseline_update_24,"Thời hạn gói dịch vụ của bạn còn 5 ngày nữa"));
+
+
+//        notifications.add(new com.example.models.Notification());
+//        notifications.add(new com.example.models.Notification(""));
+//        notifications.add(new com.example.models.Notification(""));
+//        notifications.add(new com.example.models.Notification(""));
+//        notifications.add(new com.example.models.Notification(""));
+        notificationAdapter = new NotificationAdapter(Activity_Notification.this,notifications);
         lvNotification.setAdapter(notificationAdapter);
     }
 
