@@ -65,7 +65,9 @@
                     android:inputType="textEmailAddress"
                     android:paddingTop="8dp"
                     android:textSize="15sp"
+                    android:textColorHint="@color/black"
                     android:hint="Email"/>
+
 
             </LinearLayout>
 
