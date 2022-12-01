@@ -1,39 +1,41 @@
 package com.example.adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
-import com.example.models.Deco;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.models.DecoSamples;
-import com.example.moroapplication.Activity_Deco;
+import com.example.moroapplication.Activity_Deco_Details;
 import com.example.moroapplication.R;
 
 import java.util.List;
 
-public class DecoAdapter extends BaseAdapter {
-    Activity_Deco activity_deco;
+public class DecoSamplesAdapter extends BaseAdapter {
+    Activity_Deco_Details activity_deco_details;
     int item_layout;
-    List<Deco>deco;
+    List<DecoSamples> decoSamples;
 
-    public DecoAdapter(Activity_Deco activity_deco, int item_layout, List<Deco> deco) {
-        this.activity_deco = activity_deco;
+    public DecoSamplesAdapter(Activity_Deco_Details activity_deco_details, int item_layout, List<DecoSamples> decoSamples) {
+        this.activity_deco_details = activity_deco_details;
         this.item_layout = item_layout;
-        this.deco = deco;
+        this.decoSamples = decoSamples;
     }
 
     @Override
     public int getCount() {
-        return deco.size();
+        return decoSamples.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return deco.get(i);
+        return decoSamples.get(i);
     }
 
     @Override
@@ -44,29 +46,29 @@ public class DecoAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
 //        get view: liên kết ánh xạ view để đổ dữ liệu lên
         // link view and binding data
-        DecoSamplesAdapter.ViewHolder holder;
+        ViewHolder holder;
         if(view==null){
 //            Link views
-            holder=new DecoSamplesAdapter.ViewHolder();
-            LayoutInflater inflater= (LayoutInflater) activity_deco.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            holder=new ViewHolder();
+            LayoutInflater inflater= (LayoutInflater) activity_deco_details.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view=inflater.inflate(item_layout, null);
-            holder.imvDecoSamples = view.findViewById(R.id.imb_ThumbDeco);
+            holder.imvDecoSamples = view.findViewById(R.id.imv_DecoSamples);
 
 //            holder. = view.findViewById(R.id.imvThumb);
 
             view.setTag(holder);
 
         }else{
-            holder=(DecoSamplesAdapter.ViewHolder) view.getTag();
+            holder=(ViewHolder) view.getTag();
 
         }
 //        binding data
-        Deco de =deco.get(i);
-        holder.imvDecoSamples.setImageResource(de.getThumbDeco());
+        DecoSamples d =decoSamples.get(i);
+        holder.imvDecoSamples.setImageResource(d.getDecoSamples());
         return view;
     }
     public static class ViewHolder{
-        ImageButton imb_ThumbDeco;
+        ImageView imvDecoSamples;
 
 
     }
