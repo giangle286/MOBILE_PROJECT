@@ -21,11 +21,31 @@
         >
 
         <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:background="#FADCBD"
+            android:layout_marginTop="50dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtName"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                android:hint="Tên đăng nhập"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center"
-            android:background="#FADCBD">
+            android:background="#FADCBD"
+            android:layout_marginTop="20dp"
+            >
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -33,13 +53,15 @@
                 android:src="@drawable/img_email"
                 android:layout_gravity="center">
             </ImageView>
-            <EditText
-                android:id="@+id/edt_email"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtEmail"
                 android:layout_width="270dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:hint="Email "
-                ></EditText>
+                android:inputType="textEmailAddress"
+                android:paddingTop="8dp"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:hint="Email"/>
         </LinearLayout>
 
         <LinearLayout
@@ -55,15 +77,16 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:src="@drawable/img_key"></ImageView>
-            <EditText
-                android:id="@+id/edt_password"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtPass"
                 android:layout_width="270dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:hint="Mật khẩu"
-                android:inputType="textPassword"
 
-                ></EditText>
+                android:inputType="textPassword"
+                android:paddingTop="8dp"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:hint="Mật khẩu"/>
         </LinearLayout>
 
         <LinearLayout
@@ -78,28 +101,31 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:src="@drawable/img_key"></ImageView>
-            <EditText
-                android:id="@+id/edt_re_password"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtPassAgain"
                 android:layout_width="270dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:hint="Nhập lại mật khẩu"
-                android:inputType="textPassword"
 
-                ></EditText>
+                android:inputType="textPassword"
+                android:paddingTop="8dp"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:hint="Nhập lại mật khẩu"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Body1" />
         </LinearLayout>
 
         <Button
-            android:id="@+id/btn_register"
+            android:id="@+id/btnRegister"
             android:layout_width="270dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Đăng Ký"
+            android:text="Đăng ký"
             android:textSize="20dp"
             android:backgroundTint="#C6803801"
-            android:layout_margin="40sp"
+            android:layout_marginTop="20dp"
             >
         </Button>
+
 
 
 

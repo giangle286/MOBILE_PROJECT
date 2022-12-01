@@ -1,82 +1,58 @@
-package com.example.moroapplication;
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_Notification"
+    android:orientation="vertical">
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="THÔNG BÁO"
+      android:textSize="22sp"
+      android:layout_gravity="left"
+      android:textStyle="bold"
+      android:textColor="@color/purple_700"
+      android:layout_marginTop="15dp"
+      android:layout_marginLeft="10dp"/>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:padding="5dp"
+      android:layout_marginTop="5dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thông báo mới nhất "
+        android:gravity="left"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"/>
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.widget.ListView;
-
-import com.example.adapters.NotificationAdapter;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import java.util.ArrayList;
-
-public class Activity_Notification extends AppCompatActivity {
-
-    ListView lvNotification;
-    ArrayList<com.example.models.Notification> notifications;
-    NotificationAdapter notificationAdapter;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notification);
-        linkView();
-        initData();
-        bottomNav();
-
-    }
-
-    private void bottomNav() {
-        BottomNavigationView bottomNavigationView = findViewById(R.id.menu_navigation);
-        bottomNavigationView.setSelectedItemId(R.id.action_notification);
-
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.action_account:
-                        startActivity(new Intent(getApplicationContext(),Activity_Profile.class));
-                        overridePendingTransition(0,0);
-                        return true;
-                    case R.id.action_homepage:
-                        startActivity(new Intent(getApplicationContext(),HomePage.class));
-                        overridePendingTransition(0,0);
-                        return true;
-                    case R.id.action_news:
-                        startActivity(new Intent(getApplicationContext(),Activity_Blog.class));
-                        overridePendingTransition(0,0);
-                        return true;
-                    case R.id.action_decor:
-                        startActivity(new Intent(getApplicationContext(),Activity_Deco.class));
-                        overridePendingTransition(0,0);
-                    case R.id.action_notification:
-                        return true;
-
-                }
-
-                return false;
-            }
-        });
-    }
-
-    private void initData() {
-        notifications = new ArrayList<>();
-        notifications.add(new com.example.models.Notification("Mỹ Lệ Trần đã thích bài viết của bạn"));
-        notifications.add(new com.example.models.Notification("Bảo Ngọc đã bình luận bài viết của bạn"));
-        notifications.add(new com.example.models.Notification("Bạn vừa tải lên một bài viết"));
-        notifications.add(new com.example.models.Notification("Nguyễn Lý và 3 người khác đã thích bài viết của bạn"));
-        notifications.add(new com.example.models.Notification("Mai Mai đã gửi một tin nhắn đến Nhóm nhà trọ 777"));
-        notifications.add(new com.example.models.Notification("Lý Lệ Tuyền đã thích bài viết của bạn"));
-        notificationAdapter = new NotificationAdapter(this, notifications);
-        lvNotification.setAdapter(notificationAdapter);
-    }
+  </LinearLayout>
+  <ListView
+      android:id="@+id/lvNotification"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:divider="@drawable/divider"
+      android:layout_marginTop="15dp"/>
+  <com.google.android.material.bottomnavigation.BottomNavigationView
+      android:id="@+id/menu_navigation"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      app:itemIconTint="@color/purple_700"
+      app:itemIconSize="30dp"
+      app:labelVisibilityMode="unlabeled"
+      app:itemTextColor="@color/black"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:menu="@menu/bottom_nav_menu">
+  </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
-
-    private void linkView() {
-        lvNotification = findViewById(R.id.lvNotification);
-    }
-}
+</LinearLayout>
