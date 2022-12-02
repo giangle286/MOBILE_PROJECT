@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="10dp"
     android:orientation="vertical">
     <de.hdodenhof.circleimageview.CircleImageView
@@ -21,6 +21,7 @@
         android:layout_height="wrap_content"
         android:text="Le Phuoc Toan"
         android:textSize="30dp"
+        android:textColor="@color/teal_200"
         android:layout_gravity="center"
         android:textStyle="bold"
         android:layout_marginTop="10dp">
@@ -71,9 +72,24 @@
             android:textSize="20sp">
         </TextView>
     </LinearLayout>
+
     <ListView
+        android:id="@+id/lv_function"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/lv_function">
-    </ListView>
+        android:layout_height="282dp"
+        android:layout_weight="1"></ListView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/menu_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:itemIconTint="@color/purple_700"
+        app:itemIconSize="30dp"
+        app:labelVisibilityMode="unlabeled"
+        app:itemTextColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 </LinearLayout>
