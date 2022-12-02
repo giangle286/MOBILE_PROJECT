@@ -33,13 +33,6 @@ public class Activity_Register extends AppCompatActivity {
         edtPassAgain=findViewById(R.id.edtPassAgain);
         DB=new AccountDB(this);
 
-        txtLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent =new Intent(Activity_Register.this, Activity_Login.class);
-                startActivity(intent);
-            }
-        });
 
                     btnRegister.setOnClickListener(new View.OnClickListener() {
                 @Override
