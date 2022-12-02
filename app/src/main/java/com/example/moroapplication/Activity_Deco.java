@@ -21,6 +21,7 @@ public class Activity_Deco extends AppCompatActivity {
     private RecyclerView rcvdecoCategory;
     private DecoCategoryAdapter decoCategoryAdapter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +33,10 @@ public class Activity_Deco extends AppCompatActivity {
         decoCategoryAdapter.setData(getListDecoCategory());
         rcvdecoCategory.setAdapter(decoCategoryAdapter);
         bottomNav();
+        addEvent();
+    }
+
+    private void addEvent() {
     }
 
     private void bottomNav() {
@@ -71,17 +76,17 @@ public class Activity_Deco extends AppCompatActivity {
     private List<DecoCategory> getListDecoCategory(){
         List<DecoCategory>listDecoCategory=new ArrayList<>();
         List<Deco>decoList=new ArrayList<>();
-        decoList.add(new Deco(R.drawable.sample1,"Phòng công chúa","Nhật Vy","2 phút trước"));
-        decoList.add(new Deco(R.drawable.sample2,"Phòng xịn","Huy Hoàng","10 phút trước"));
-        decoList.add(new Deco(R.drawable.sample3,"Phòng sang","Linh Anh","20 phút trước"));
+        decoList.add(new Deco(R.drawable.sample1,"Decor tối giản","Nhật Vy","2 phút trước"));
+        decoList.add(new Deco(R.drawable.sample2,"Phòng công chúa","Huy Hoàng","10 phút trước"));
+        decoList.add(new Deco(R.drawable.sample3,"Mẫu deco đẹp","Linh Anh","20 phút trước"));
 
         decoList.add(new Deco(R.drawable.sample1,"Phòng công chúa","Nhật Vy","2 phút trước"));
         decoList.add(new Deco(R.drawable.sample2,"Phòng xịn","Huy Hoàng","10 phút trước"));
         decoList.add(new Deco(R.drawable.sample3,"Phòng sang","Linh Anh","20 phút trước"));
 
         listDecoCategory.add(new DecoCategory("Bài đăng mới nhất",decoList));
-        listDecoCategory.add(new DecoCategory("Phong cách tối giản",decoList));
         listDecoCategory.add(new DecoCategory("Phong cách vintage",decoList));
+        listDecoCategory.add(new DecoCategory("Phong cách tối giản",decoList));
         listDecoCategory.add(new DecoCategory("Phong cách hiện đại",decoList));
 
 

@@ -33,22 +33,23 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       app:cardCornerRadius="15dp">
-
-    <ImageView
-        android:id="@+id/imv_DecoSamples"
-        android:scaleType="centerCrop"
+    <androidx.viewpager.widget.ViewPager
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        >
+      android:id="@+id/deco_viewpager"/>
 
-
-    </ImageView>
   </androidx.cardview.widget.CardView>
+  <me.relex.circleindicator.CircleIndicator
+      android:id="@+id/deco_circle_indicator"
+      app:ci_drawable="@drawable/bg_indicator"
+      android:layout_width="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:layout_height="30dp" />
 
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:padding="10dp"
+      android:padding="3dp"
       android:orientation="horizontal"
       android:weightSum="10">
     <TextView
@@ -58,6 +59,7 @@
         android:text="Deco sang xịn"
         android:textSize="22sp"
         android:textStyle="bold"
+        android:layout_marginLeft="5dp"
         android:layout_weight="8"/>
     <ImageView
         android:id="@+id/imv_Favorite"
@@ -82,11 +84,9 @@
       android:orientation="horizontal"
       android:padding="5dp">
     <ImageView
-
         android:layout_width="60dp"
         android:layout_height="50dp"
         android:src="@drawable/deco_user" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -97,15 +97,74 @@
         android:gravity="top"
         android:layout_marginLeft="10dp"/>
   </LinearLayout>
-
-  <TextView
-      android:id="@+id/txt_Intro"
-      android:layout_width="wrap_content"
+  <LinearLayout
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_marginTop="10dp"
-      android:background="@drawable/stroke"
-      android:gravity="left"
-      android:text="  Mô tả:\n  Một mẫu trang trí phòng sang xịn hợp thời theo phong cách của mình cho các bạn tham khảo. Đừng quên cho mình xem     căn phòng của bạn nhé " />
+      android:orientation="vertical"
+      android:padding="7dp"
+      android:layout_marginHorizontal="10dp"
+      android:background="@drawable/stroke">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mô tả:"
+        android:textColor="#993E22"
+        android:textStyle="bold"
+
+        android:layout_marginVertical="5dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Một mẫu trang trí phòng sang xịn hợp thời theo phong cách hiện đại của mình cho các bạn tham khảo. Đừng quên cho mình xem căn phòng của bạn nhé! "
+
+        android:layout_marginBottom="7dp"
+         />
+  </LinearLayout>
+
+<!--  <TextView-->
+<!--      android:padding="5dp"-->
+<!--      android:id="@+id/txt_Intro"-->
+<!--      android:layout_width="wrap_content"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      android:layout_marginTop="10dp"-->
+<!--      android:background="@drawable/stroke"-->
+<!--      android:gravity="left"-->
+<!--      android:text="Mô tả:\n  Một mẫu trang trí phòng sang xịn hợp thời theo phong cách của mình cho các bạn tham khảo. Đừng quên cho mình xem  căn phòng của bạn nhé "-->
+<!--      />-->
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="5dp"
+      android:orientation="horizontal"
+      android:layout_marginHorizontal="10dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/stroke"
+        android:gravity="left"
+        android:text="#PhongXinh"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/stroke"
+        android:gravity="left"
+        android:text="#Tối giản"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/stroke"
+        android:gravity="left"
+        android:text="#MauDecoDep"
+        android:layout_marginLeft="10dp"/>
+
+
+  </LinearLayout>
+
 
 
 </LinearLayout>
