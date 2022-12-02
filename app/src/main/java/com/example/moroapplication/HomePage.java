@@ -50,7 +50,7 @@ public class HomePage extends AppCompatActivity {
             }
         });
     }
-
+//Đây là hompage nhé
 
 
 
