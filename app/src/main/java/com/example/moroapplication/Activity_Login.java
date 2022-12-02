@@ -1,6 +1,5 @@
 package com.example.moroapplication;
 
-import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -14,10 +13,10 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.FrameLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,6 +27,7 @@ import com.facebook.AccessTokenTracker;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
 import com.facebook.GraphRequest;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
@@ -52,22 +52,21 @@ public class Activity_Login extends AppCompatActivity {
     GoogleSignInClient mGoogleSignInClient;
     private static int RC_SIGN_IN = 100;
 
-    //    ImageView imvBack;
-    TextView txtForgotPass, txtRegister;
-    FrameLayout btnLogin, FB, GG;
-            AccountDB DB;
+    FrameLayout FB, GG;
+    Button btnLogin, btnRegister, btnForgotPass;
+    AccountDB DB;
     TextInputEditText edtEmail, edtPass;
     CheckBox chkRemember;
     Dialog dialogWait;
 
-    @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_login);
 
-        txtForgotPass = findViewById(R.id.txtForgotPass);
-        txtRegister = findViewById(R.id.txtRegister);
+        btnRegister = findViewById(R.id.btnRegister);
+        btnForgotPass = findViewById(R.id.btnForgotPass);
         btnLogin = findViewById(R.id.btnLogin);
         chkRemember = findViewById(R.id.chkRemember);
         edtEmail = findViewById(R.id.edtEmail);
@@ -106,6 +105,7 @@ public class Activity_Login extends AppCompatActivity {
                 }
             });
             LoginManager.getInstance().logOut();
+
             //Đăng nhập bằng Google
             GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                     .requestEmail()
@@ -193,13 +193,14 @@ public class Activity_Login extends AppCompatActivity {
                 }
             });
 
-            txtForgotPass.setOnClickListener(new View.OnClickListener() {
+            btnForgotPass.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     openForgotPassDialog(Gravity.BOTTOM);
                 }
             });
-            txtRegister.setOnClickListener(new View.OnClickListener() {
+
+            btnRegister.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     startActivity(new Intent(Activity_Login.this, Activity_Register.class));
@@ -231,11 +232,10 @@ public class Activity_Login extends AppCompatActivity {
             }
             dialog.show();
 
-            FrameLayout btnContinue = dialog.findViewById(R.id.btnContinue);
+            Button btnContinue = dialog.findViewById(R.id.btnContinue);
             TextInputEditText edtEmailVerify=dialog.findViewById(R.id.edtEmailVerify);
 
             //mở dialog thứ 2
-
             btnContinue.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -243,15 +243,13 @@ public class Activity_Login extends AppCompatActivity {
                     Bundle bundle = new Bundle();
                     bundle.putString("mail", mail);
 
-                    boolean checkemail=DB.checkemail(mail);
-                    if(checkemail==true){
-                        //truyền email mới nhập đi
+                    boolean checkmail = DB.checkemail(mail);
+                    if (checkmail==true){
                         openResetPassDialog(Gravity.BOTTOM, bundle);
                         dialog.dismiss();
                     }else{
-                        Toast.makeText(Activity_Login.this, "Tài khoản không tồn tại", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Activity_Login.this,"Tài khoản không tồn tại", Toast.LENGTH_LONG).show();
                     }
-
                 }
             });
         }
@@ -274,7 +272,7 @@ public class Activity_Login extends AppCompatActivity {
             windowAttribute.gravity = gravity;
             window.setAttributes(windowAttribute);
 
-            if (Gravity.BOTTOM == gravity) {
+            if (Gravity.CENTER == gravity) {
                 dialog1.setCancelable(true);
             } else {
                 dialog1.setCancelable(false);
