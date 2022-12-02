@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activityRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_Message_Details">
+
+
+        <RelativeLayout
+            android:id="@+id/rcl_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_700"
+            android:padding="5dp">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_pro"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:cardCornerRadius="50dp"
+                android:layout_marginEnd="10dp">
+                <ImageView
+                    android:id="@+id/imv_pro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:layout_toStartOf="@id/txt_pro"
+                    android:src="@drawable/loadingscreen"/>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/txt_pro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="Moro Application"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_toEndOf="@+id/cv_pro"/>
+
+        </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layout_bottom"
+        android:layout_below="@id/rcl_message"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"/>
+
+        <RelativeLayout
+            android:id="@+id/layout_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_alignParentBottom="true">
+            <EditText
+                android:id="@+id/edt_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nhập tin nhắn"
+                android:textSize="18dp"
+                android:layout_toStartOf="@id/imb_send"
+                android:layout_marginEnd="10dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:background="@drawable/stroke"/>
+            <ImageButton
+                android:id="@+id/imb_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_send_24"
+                android:layout_alignParentEnd="true"
+                android:backgroundTint="@color/white" />
+
+        </RelativeLayout>
+
+
+
+</RelativeLayout>
