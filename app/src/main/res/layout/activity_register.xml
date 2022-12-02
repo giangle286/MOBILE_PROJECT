@@ -33,7 +33,7 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                android:textColor="@color/black"
+                android:textColorHint="@color/black"
                 android:hint="Tên đăng nhập"
                 android:textSize="15sp" />
         </LinearLayout>
@@ -62,7 +62,8 @@
                 android:paddingTop="8dp"
                 android:textColor="@color/black"
                 android:textSize="15sp"
-                android:hint="Email"/>
+                android:hint="Email"
+                android:textColorHint="@color/black"/>
         </LinearLayout>
 
         <LinearLayout
@@ -89,7 +90,8 @@
                 android:paddingTop="8dp"
                 android:textColor="@color/black"
                 android:textSize="15sp"
-                android:hint="Mật khẩu"/>
+                android:hint="Mật khẩu"
+                android:textColorHint="@color/black"/>
         </LinearLayout>
 
         <LinearLayout
@@ -115,6 +117,7 @@
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:hint="Nhập lại mật khẩu"
+                android:textColorHint="@color/black"
                 app:hintTextAppearance="@style/TextAppearance.AppCompat.Body1" />
         </LinearLayout>
 

@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity_Choose_Service_Roommate"
     android:orientation="vertical"
-   >
+    tools:context=".Activity_Choose_Service_Rent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,7 +25,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Đăng bài tìm người ở ghép"
+            android:text="Đăng bài cho thuê"
             android:textColor="#993B22"
             android:layout_gravity="center"
             android:textSize="20dp"
@@ -61,7 +60,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Đăng bài xuất hiện trong mục Tìm Người Ở Ghép."
+            android:text="Đăng bài xuất hiện trong mục Nhà Cho Thuê."
             android:textColor="#AD000000"></TextView>
         <View
             android:layout_width="fill_parent"
@@ -94,29 +93,29 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/btn_1dvmate"
+                android:id="@+id/btn_1dvroom"
                 android:layout_width="102dp"
                 android:layout_height="wrap_content"
-                android:text="Gói 1 ngày 19.000 VNĐ"
+                android:text="Gói 1 ngày 45.000 VNĐ"
                 android:textSize="10sp"
                 android:layout_marginRight="10dp"
                 android:layout_gravity="center"></Button>
 
             <Button
-                android:id="@+id/btn_7dvmate"
+                android:id="@+id/btn_7dvroom"
                 android:layout_width="102dp"
                 android:layout_height="wrap_content"
-                android:text="Gói 7 ngày 119.000 VNĐ"
+                android:text="Gói 7 ngày 269.000 VNĐ"
                 android:textSize="10sp"
                 android:layout_gravity="center"
                 android:layout_marginRight="10dp"></Button>
 
             <Button
-                android:id="@+id/btn_1mvmate"
-                android:layout_width="102dp"
+                android:id="@+id/btn_1mvroom"
+                android:layout_width="115dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Gói 30 ngày 469.000 VNĐ"
+                android:text="Gói 30 ngày 1.119.000 VNĐ"
                 android:textSize="10sp"
                 ></Button>
 
@@ -144,7 +143,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Đăng bài xuất hiện trong mục Tìm Người Ở Ghép."
+            android:text="Đăng bài xuất hiện trong mục Nhà cho Thuê."
             android:textColor="#AD000000"></TextView>
         <View
             android:layout_width="fill_parent"
@@ -167,33 +166,34 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/btn_1dmate"
+                android:id="@+id/btn_1droom"
                 android:layout_width="102dp"
                 android:layout_height="wrap_content"
-                android:text="Gói 1 ngày 3.000 VNĐ"
+                android:text="Gói 1 ngày 5.000 VNĐ"
                 android:textSize="10sp"
                 android:layout_marginRight="10dp"
                 android:layout_gravity="center"></Button>
 
             <Button
-                android:id="@+id/btn_7dmate"
+                android:id="@+id/btn_7droom"
                 android:layout_width="102dp"
                 android:layout_height="wrap_content"
-                android:text="Gói 7 ngày 18.000 VNĐ"
+                android:text="Gói 7 ngày 29.000 VNĐ"
                 android:textSize="10sp"
                 android:layout_gravity="center"
                 android:layout_marginRight="10dp"></Button>
 
             <Button
-                android:id="@+id/btn_1mmate"
+                android:id="@+id/btn_1mroom"
                 android:layout_width="102dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Gói 30 ngày 59.000 VNĐ"
+                android:text="Gói 30 ngày 119.000 VNĐ"
                 android:textSize="10sp"
                 ></Button>
 
         </LinearLayout>
 
-</LinearLayout>
     </LinearLayout>
+
+</LinearLayout>
