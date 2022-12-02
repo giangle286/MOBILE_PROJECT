@@ -32,7 +32,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/img_email"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                android:padding="5dp">
             </ImageView>
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtEmail"
@@ -42,7 +43,8 @@
                 android:paddingTop="8dp"
                 android:textColor="@color/black"
                 android:textSize="15sp"
-                android:hint="Email đăng nhập"/>
+                android:hint="Email đăng nhập"
+                android:textColorHint="@color/black"/>
 
 
         </LinearLayout>
@@ -60,7 +62,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:src="@drawable/img_key"></ImageView>
+                android:src="@drawable/img_key"
+                android:padding="5dp"></ImageView>
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtPass"
@@ -70,7 +73,8 @@
                 android:paddingTop="8dp"
                 android:textColor="@color/black"
                 android:textSize="15sp"
-                android:hint="Mật khẩu"/>
+                android:hint="Mật khẩu"
+                android:textColorHint="@color/black"/>
 
         </LinearLayout>
         <CheckBox

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_Choose_Service_Roommate"
+    android:orientation="vertical"
+   >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            ></ImageButton>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đăng bài tìm người ở ghép"
+            android:textColor="#993B22"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:textStyle="bold"></TextView>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chọn gói đăng tin"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:layout_marginLeft="30dp"></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/stroke">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đăng tin nổi bật"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginVertical="10dp"
+            ></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đăng bài xuất hiện trong mục Tìm Người Ở Ghép."
+            android:textColor="#AD000000"></TextView>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"
+            android:layout_margin="2dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Được tích hợp các tính năng: liên kết tài khoản Zalo để liên lạc; người đăng bài được gắn HashTag để bộ lọc tìm kiếm nhận dạng."
+            android:textColor="#AD000000"></TextView>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"
+            android:layout_margin="2dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Xuất hiện trên tin Nổi Bật, bộ lọc tìm kiếm được ưu tiên."
+            android:textColor="#AD000000"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:weightSum="3"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_1dvmate"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:text="Gói 1 ngày 19.000 VNĐ"
+                android:textSize="10sp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"></Button>
+
+            <Button
+                android:id="@+id/btn_7dvmate"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:text="Gói 7 ngày 119.000 VNĐ"
+                android:textSize="10sp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"></Button>
+
+            <Button
+                android:id="@+id/btn_1mvmate"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Gói 30 ngày 469.000 VNĐ"
+                android:textSize="10sp"
+                ></Button>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/stroke">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đăng tin thường"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginVertical="10dp"
+            ></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đăng bài xuất hiện trong mục Tìm Người Ở Ghép."
+            android:textColor="#AD000000"></TextView>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"
+            android:layout_margin="2dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Được tích hợp các tính năng: liên kết tài khoản Zalo để liên lạc; người đăng bài được gắn HashTag để bộ lọc tìm kiếm nhận dạng."
+            android:textColor="#AD000000"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:weightSum="3"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_1dmate"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:text="Gói 1 ngày 3.000 VNĐ"
+                android:textSize="10sp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"></Button>
+
+            <Button
+                android:id="@+id/btn_7dmate"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:text="Gói 7 ngày 18.000 VNĐ"
+                android:textSize="10sp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"></Button>
+
+            <Button
+                android:id="@+id/btn_1mmate"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Gói 30 ngày 59.000 VNĐ"
+                android:textSize="10sp"
+                ></Button>
+
+        </LinearLayout>
+
+</LinearLayout>
+    </LinearLayout>

@@ -1,47 +1,47 @@
 package com.example.models;
 
 public class Deco {
-    int ThumbDeco;
-    String NameDeco;
-    String UserDeco;
-    String TimeDeco;
+    private int resourceId;
+    private String nameDeco;
+    private String userDeco;
+    private String timeDeco;
 
-    public Deco(int thumbDeco, String nameDeco, String userDeco, String timeDeco) {
-        ThumbDeco = thumbDeco;
-        NameDeco = nameDeco;
-        UserDeco = userDeco;
-        TimeDeco = timeDeco;
+    public Deco(int resourceId, String nameDeco, String userDeco, String timeDeco) {
+        this.resourceId = resourceId;
+        this.nameDeco = nameDeco;
+        this.userDeco = userDeco;
+        this.timeDeco = timeDeco;
     }
 
-    public int getThumbDeco() {
-        return ThumbDeco;
+    public int getResourceId() {
+        return resourceId;
     }
 
-    public void setThumbDeco(int thumbDeco) {
-        ThumbDeco = thumbDeco;
+    public void setResourceId(int resourceId) {
+        this.resourceId = resourceId;
     }
 
     public String getNameDeco() {
-        return NameDeco;
+        return nameDeco;
     }
 
     public void setNameDeco(String nameDeco) {
-        NameDeco = nameDeco;
+        this.nameDeco = nameDeco;
     }
 
     public String getUserDeco() {
-        return UserDeco;
+        return userDeco;
     }
 
     public void setUserDeco(String userDeco) {
-        UserDeco = userDeco;
+        this.userDeco = userDeco;
     }
 
     public String getTimeDeco() {
-        return TimeDeco;
+        return timeDeco;
     }
 
     public void setTimeDeco(String timeDeco) {
-        TimeDeco = timeDeco;
+        this.timeDeco = timeDeco;
     }
 }
