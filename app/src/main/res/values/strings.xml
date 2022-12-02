@@ -3,4 +3,8 @@
 
     <string name="underline">This is an <u>underline</u>.</string>
 
+    <string name="fb_login_protocol_scheme">fb599472041314938</string>
+
+    <string name="facebook_app_id">599472041314938</string>
+
 </resources>

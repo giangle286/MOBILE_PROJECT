@@ -1,11 +1,9 @@
 package com.example.moroapplication;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.FrameLayout;
-import android.widget.TextView;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,13 +12,11 @@ import com.example.database.AccountDB;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class Activity_Register extends AppCompatActivity {
-    TextView txtLogin;
-    //    ImageView imvBack;
-    FrameLayout btnRegister;
+
+    Button btnRegister;
     TextInputEditText edtName,edtEmail,edtPass,edtPassAgain;
 
     AccountDB DB;
-    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,7 +52,7 @@ public class Activity_Register extends AppCompatActivity {
                                     Toast.makeText(Activity_Register.this, "Đăng ký không thành công", Toast.LENGTH_SHORT).show();
                                 }
                             }else{
-                                Toast.makeText(Activity_Register.this, "Tài khoản đã tồn tại, hãy đăng nhập đi bạn ui", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Activity_Register.this, "Tài khoản đã tồn tại", Toast.LENGTH_SHORT).show();
                             }
                         }else{
                             Toast.makeText(Activity_Register.this, "Nhập lại mật khẩu không khớp", Toast.LENGTH_SHORT).show();
