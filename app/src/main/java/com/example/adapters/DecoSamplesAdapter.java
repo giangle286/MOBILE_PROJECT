@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.PagerAdapter;
 
 import com.example.models.DecoSamples;
 import com.example.moroapplication.Activity_Deco_Details;
@@ -19,41 +20,43 @@ import com.example.moroapplication.R;
 
 import java.util.List;
 
-public class DecoSamplesAdapter extends RecyclerView.Adapter<DecoSamplesAdapter.DecoSamplesViewHolder> {
-    private List<DecoSamples> ListDecoSamples;
+public class DecoSamplesAdapter extends PagerAdapter {
+    private List<DecoSamples>mListDecoSamples;
 
-    public DecoSamplesAdapter(List<DecoSamples> listDecoSamples) {
-        ListDecoSamples = listDecoSamples;
+    public DecoSamplesAdapter(List<DecoSamples> mListDecoSamples) {
+        this.mListDecoSamples = mListDecoSamples;
     }
 
     @NonNull
     @Override
-    public DecoSamplesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public Object instantiateItem(@NonNull ViewGroup container, int position) {
+        View view=LayoutInflater.from(container.getContext()).inflate(R.layout.activity_itemdecodetail,container,false);
+        ImageView imvDecoSamples=view.findViewById(R.id.imv_DecoSamples);
+        DecoSamples decoSamples=mListDecoSamples.get(position);
+        imvDecoSamples.setImageResource(decoSamples.getResourceID());
+        //add view
+        container.addView(view);
 
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_itemdecodetail, parent, false);
-        return new DecoSamplesViewHolder(view);
+
+        return view;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull DecoSamplesViewHolder holder, int position) {
-        DecoSamples decoSamples = ListDecoSamples.get(position);
-        if (decoSamples == null) {
-            return;
+    public int getCount() {
+        if(mListDecoSamples!=null){
+            return mListDecoSamples.size();
         }
-        holder.imv_DecoSamples.setImageResource(decoSamples.getImv_DecoSample());
+        return 0;
     }
 
     @Override
-    public int getItemCount() {
-        return ListDecoSamples.size();
+    public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
+        return view==object;
     }
 
-    public class DecoSamplesViewHolder extends RecyclerView.ViewHolder {
-        private ImageView imv_DecoSamples;
-
-        public DecoSamplesViewHolder(@NonNull View itemView) {
-            super(itemView);
-            imv_DecoSamples = itemView.findViewById(R.id.imv_DecoSamples);
-        }
+    @Override
+    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
+        container.removeView((View) object);
     }
 }
+
