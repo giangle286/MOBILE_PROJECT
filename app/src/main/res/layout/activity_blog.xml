@@ -56,7 +56,20 @@
     <ListView
         android:id="@+id/lv_blogsample"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/menu_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@color/purple_700"
+        app:itemTextColor="@color/black"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu"></com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
 
