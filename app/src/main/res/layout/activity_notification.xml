@@ -8,15 +8,35 @@
     tools:context=".Activity_Notification"
     android:orientation="vertical">
 
-  <TextView
-      android:layout_width="wrap_content"
+  <LinearLayout
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="THÔNG BÁO"
-      android:textSize="20dp"
-      android:layout_gravity="center"
-      android:textStyle="bold"
-      android:textColor="@color/black"
-      android:layout_marginTop="15dp"/>
+      android:orientation="horizontal"
+      android:padding="10dp"
+      android:weightSum="10">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thông báo"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="2dp"
+        android:textStyle="bold"
+        android:textColor="@color/teal_200"
+        android:layout_weight="9"/>
+    <ImageButton
+        android:id="@+id/imb_MessageinNoti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:src="@drawable/ic_baseline_message_24"
+        android:backgroundTint="@color/white"/>
+
+
+  </LinearLayout>
+
+
   <ListView
       android:id="@+id/lvNotification"
       android:layout_width="match_parent"

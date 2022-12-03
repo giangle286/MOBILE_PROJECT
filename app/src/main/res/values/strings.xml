@@ -2,11 +2,19 @@
     <string name="app_name">Moro Application</string>
 
     <string name="underline">This is an <u>underline</u>.</string>
-    <string name="select">Select Item</string>
+    <string name="điaiem">Đại điểm</string>
+    <string name="gia">Giá</string>
+    <string name="loaihinhchothue">Loại hình cho thuê</string>
 
-    <string name="fb_login_protocol_scheme">fb599472041314938</string>
+    <string name="title_activity_after_research">Activity_After_research</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
 
-    <string name="facebook_app_id">599472041314938</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
 </resources>
 
