@@ -11,8 +11,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Thiết kế"
-            android:textSize="22dp"
-            android:padding="6dp"
+            android:textSize="20dp"
+            android:padding="5dp"
+            android:layout_marginLeft="5dp"
             android:textColor="#993B22"
             android:textStyle="bold"
             android:gravity="top"/>
@@ -46,37 +47,40 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="10dp"
                 android:src="@drawable/ic_baseline_filter_alt_24" />
 
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:padding="5dp"
-                android:textSize="14dp"
+                android:textSize="12dp"
                 android:text="Vintage"
                 android:backgroundTint="#912C11"
                 android:background="@drawable/stroke"/>
 
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="2"
+                android:padding="5dp"
                 android:backgroundTint="#993B22"
                 android:gravity="center"
+                android:textSize="12dp"
                 android:text="Tối giản"
                 android:background="@drawable/stroke"/>
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="3"
+                android:textSize="12dp"
                 android:backgroundTint="#993B22"
                 android:padding="5dp"
                 android:text="Đăng tin"

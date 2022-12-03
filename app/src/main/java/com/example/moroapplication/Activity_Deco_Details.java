@@ -5,8 +5,11 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.adapters.DecoSamplesAdapter;
+import com.example.models.Deco;
 import com.example.models.DecoSamples;
 import com.example.moroapplication.databinding.ActivityDecoDetailsBinding;
 
@@ -45,7 +48,7 @@ public class Activity_Deco_Details extends AppCompatActivity {
         DecoSamplesAdapter adapter=new DecoSamplesAdapter(mListDecoSamples);
         mViewPager.setAdapter(adapter);
         mCircleIndicator.setViewPager(mViewPager);
-        mHandler.postDelayed(mRunnable,4000);
+        mHandler.postDelayed(mRunnable,2000);
         mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -56,7 +59,7 @@ public class Activity_Deco_Details extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 mHandler.removeCallbacks(mRunnable);
-                mHandler.postDelayed(mRunnable,5000);
+                mHandler.postDelayed(mRunnable,3000);
 
             }
 
@@ -71,7 +74,7 @@ public class Activity_Deco_Details extends AppCompatActivity {
         list.add(new DecoSamples(R.drawable.deco_detail1));
         list.add(new DecoSamples(R.drawable.deco_detail2));
         list.add(new DecoSamples(R.drawable.deco_detail3));
-        list.add(new DecoSamples(R.drawable.deco_detail1));
+        list.add(new DecoSamples(R.drawable.deco_detail4));
 
 
 
