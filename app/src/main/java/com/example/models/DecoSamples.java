@@ -1,17 +1,17 @@
 package com.example.models;
 
 public class DecoSamples {
-    private int imv_DecoSample;
+    private int resourceID;
 
-    public DecoSamples(int imv_DecoSample) {
-        this.imv_DecoSample = imv_DecoSample;
+    public DecoSamples(int resourceID) {
+        this.resourceID = resourceID;
     }
 
-    public int getImv_DecoSample() {
-        return imv_DecoSample;
+    public int getResourceID() {
+        return resourceID;
     }
 
-    public void setDecoSamples(int imv_DecoSample) {
-        this.imv_DecoSample = imv_DecoSample;
+    public void setResourceID(int resourceID) {
+        this.resourceID = resourceID;
     }
 }
