@@ -1,7 +1,11 @@
 package com.example.moroapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.example.adapters.MessageListAdapter;
@@ -24,6 +28,20 @@ public class Activity_Message extends AppCompatActivity {
 
         linkView();
         initData();
+        selectedmessage();
+    }
+
+    private void selectedmessage() {
+        lvMessageList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent= new Intent(Activity_Message.this,Activity_Message_Details.class);
+//                products beeritem = beerlist.get(i);
+//                intent.putExtra("selectbeer", beeritem.getImvbeer());
+//                intent.putExtra("selectname",beeritem.getName());
+                startActivity(intent);
+            }
+        });
     }
 
     private void initData() {

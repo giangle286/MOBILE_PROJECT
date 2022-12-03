@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MoroApplication"
         tools:targetApi="31">
+    
         <activity
             android:name=".Activity_Blog"
             android:exported="false">
@@ -33,6 +35,13 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".Activity_Choose_Service_Rent"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Activity_Deco"
             android:exported="false">
             <meta-data
@@ -41,6 +50,13 @@
         </activity>
         <activity
             android:name=".Activity_Deco_Details"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+         <activity
+            android:name=".Activity_Filter"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -68,6 +84,13 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".Activity_Message_Details"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Activity_Notification"
             android:exported="false">
             <meta-data
@@ -89,6 +112,20 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".Activity_Payment_Success"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity_Post_Rent"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Activity_Profile"
             android:exported="false">
             <meta-data
@@ -102,35 +139,35 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-         <activity
+        <activity
             android:name=".Activity_Profile_Detail2"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-         <activity
+        <activity
             android:name=".Activity_Profile_Detail3"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-         <activity
+        <activity
             android:name=".Activity_Profile_Detail4"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-         <activity
+        <activity
             android:name=".Activity_Profile_Detail5"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-         <activity
+        <activity
             android:name=".Activity_Profile_Detail6"
             android:exported="false">
             <meta-data
@@ -144,7 +181,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-         <activity
+        <activity
             android:name=".Activity_Room_Details"
             android:exported="false">
             <meta-data
@@ -153,7 +190,7 @@
         </activity>
         <activity
             android:name=".Activity_SharedRoom_Details"
-             android:exported="false">
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -165,7 +202,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".nhap"
             android:exported="false">
@@ -175,7 +211,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-          android:exported="false">
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

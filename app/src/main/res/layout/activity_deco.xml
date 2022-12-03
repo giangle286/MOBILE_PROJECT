@@ -86,11 +86,12 @@
                 android:text="Đăng tin"
                 android:background="@drawable/stroke"/>
         </LinearLayout>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcv_decoCategory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/menu_navigation"
