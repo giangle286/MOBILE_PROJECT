@@ -6,9 +6,6 @@
     <string name="gia">Giá</string>
     <string name="loaihinhchothue">Loại hình cho thuê</string>
 
-    <string name="fb_login_protocol_scheme">fb599472041314938</string>
-
-    <string name="facebook_app_id">599472041314938</string>
     <string name="title_activity_after_research">Activity_After_research</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
