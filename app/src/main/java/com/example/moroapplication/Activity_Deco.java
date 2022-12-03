@@ -89,9 +89,6 @@ public class Activity_Deco extends AppCompatActivity {
         listDecoCategory.add(new DecoCategory("Phong cách tối giản",decoList));
         listDecoCategory.add(new DecoCategory("Phong cách hiện đại",decoList));
 
-
-
-
         return listDecoCategory;
     }
 }
