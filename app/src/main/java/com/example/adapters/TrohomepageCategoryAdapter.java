@@ -10,9 +10,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.models.GridviewTrohomepage;
 import com.example.models.TrohomepageCategory;
+import com.example.moroapplication.HomePage;
 import com.example.moroapplication.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TrohomepageCategoryAdapter extends RecyclerView.Adapter<TrohomepageCategoryAdapter.CategoryViewHolder> {
@@ -22,6 +25,7 @@ public class TrohomepageCategoryAdapter extends RecyclerView.Adapter<Trohomepage
     public TrohomepageCategoryAdapter(Context mContext) {
         this.mContext = mContext;
     }
+
 
     public void setData(List<TrohomepageCategory> list) {
         this.mlistTrohomepageCategory = list;
