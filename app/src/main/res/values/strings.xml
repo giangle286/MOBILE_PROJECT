@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">DropdownMenu</string>
+    <string name="app_name">Moro Application</string>
+
+    <string name="underline">This is an <u>underline</u>.</string>
     <string name="select">Select Item</string>
+
 </resources>
