@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.adapters.DecoCategoryAdapter;
+import com.example.interfaces.IClickItemDecoListener;
 import com.example.models.Deco;
 import com.example.models.DecoCategory;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -76,19 +77,50 @@ public class Activity_Deco extends AppCompatActivity {
     private List<DecoCategory> getListDecoCategory(){
         List<DecoCategory>listDecoCategory=new ArrayList<>();
         List<Deco>decoList=new ArrayList<>();
-        decoList.add(new Deco(R.drawable.sample1,"Decor tối giản","Nhật Vy","2 phút trước"));
-        decoList.add(new Deco(R.drawable.sample2,"Phòng công chúa","Huy Hoàng","10 phút trước"));
+        List<Deco>decoList1=new ArrayList<>();
+        List<Deco>decoList2=new ArrayList<>();
+        List<Deco>decoList3=new ArrayList<>();
+
+
+        decoList.add(new Deco(R.drawable.sample1,"Decor tối giản","Nhật Linh","2 phút trước"));
+        decoList.add(new Deco(R.drawable.sample2,"Phòng công chúa","Thùy Dung","10 phút trước"));
+        decoList.add(new Deco(R.drawable.sample3,"Mẫu deco đẹp","Linh Anh","20 phút trước"));
+        decoList.add(new Deco(R.drawable.sample1,"Decor tối giản","Nhật Linh","2 phút trước"));
+        decoList.add(new Deco(R.drawable.sample2,"Phòng công chúa","Thùy Dung","10 phút trước"));
         decoList.add(new Deco(R.drawable.sample3,"Mẫu deco đẹp","Linh Anh","20 phút trước"));
 
-        decoList.add(new Deco(R.drawable.sample1,"Phòng công chúa","Nhật Vy","2 phút trước"));
-        decoList.add(new Deco(R.drawable.sample2,"Phòng xịn","Huy Hoàng","10 phút trước"));
-        decoList.add(new Deco(R.drawable.sample3,"Phòng sang","Linh Anh","20 phút trước"));
+        decoList1.add(new Deco(R.drawable.sample4,"Mẫu Vinatge","Thủy Anh","40 phút trước"));
+        decoList1.add(new Deco(R.drawable.sample5,"My room","Khánh Linh","1 ngày trước"));
+        decoList1.add(new Deco(R.drawable.sample6,"Decor siêu xinh ","Tiến Anh","2 tiếng trước"));
+        decoList1.add(new Deco(R.drawable.sample4,"Mẫu Vinatge","Thủy Anh","56 phút trước"));
+        decoList1.add(new Deco(R.drawable.sample5,"My room","Khánh Linh","3 ngày trước"));
+        decoList1.add(new Deco(R.drawable.sample6,"Decor siêu xinh ","Tiến Anh","23 phút trước"));
+
+        decoList2.add(new Deco(R.drawable.sample7,"Đơn giản vẫn đẹp","Trúc Anh","12 phút trước"));
+        decoList2.add(new Deco(R.drawable.sample8,"Mẫu phòng tối giản","Ngân Hà","5 ngày trước"));
+        decoList2.add(new Deco(R.drawable.sample9,"Phòng đẹp của tôi","Phương Linh","21 phút trước"));
+        decoList2.add(new Deco(R.drawable.sample7,"Đơn giản vẫn đẹp","Trúc Anh","12 phút trước"));
+        decoList2.add(new Deco(R.drawable.sample8,"Mẫu phòng tối giản","Ngân Hà","5 ngày trước"));
+        decoList2.add(new Deco(R.drawable.sample9,"Phòng đẹp của tôi","Phương Linh","21 phút trước"));
+
+        decoList3.add(new Deco(R.drawable.sample10,"Phòng hiện đại ","Hương Trang","10 giờ trước"));
+        decoList3.add(new Deco(R.drawable.sample11,"Sang xịn mịn ","Thế Anh","19 giờ trước"));
+        decoList3.add(new Deco(R.drawable.sample12,"My modern room ","Thế Phát","11 giờ trước"));
+        decoList3.add(new Deco(R.drawable.sample13,"Phòng hiện đại ","Hương Trang","10 giờ trước"));
+        decoList3.add(new Deco(R.drawable.sample11,"Sang xịn mịn ","Thế Anh","19 giờ trước"));
+        decoList3.add(new Deco(R.drawable.sample12,"My modern room ","Thế Phát","11 giờ trước"));
+
+
+
+
+
 
         listDecoCategory.add(new DecoCategory("Bài đăng mới nhất",decoList));
-        listDecoCategory.add(new DecoCategory("Phong cách vintage",decoList));
-        listDecoCategory.add(new DecoCategory("Phong cách tối giản",decoList));
-        listDecoCategory.add(new DecoCategory("Phong cách hiện đại",decoList));
+        listDecoCategory.add(new DecoCategory("Phong cách vintage",decoList1));
+        listDecoCategory.add(new DecoCategory("Phong cách tối giản",decoList2));
+        listDecoCategory.add(new DecoCategory("Phong cách hiện đại",decoList3));
 
         return listDecoCategory;
     }
+
 }

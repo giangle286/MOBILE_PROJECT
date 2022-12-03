@@ -1,6 +1,8 @@
 package com.example.models;
 
-public class Deco {
+import java.io.Serializable;
+
+public class Deco { //implements Serializable {
     private int resourceId;
     private String nameDeco;
     private String userDeco;
