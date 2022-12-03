@@ -1,28 +1,29 @@
 package com.example.adapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.models.Deco;
-import com.example.models.DecoSamples;
-import com.example.moroapplication.Activity_Deco;
+import com.example.moroapplication.Activity_Deco_Details;
 import com.example.moroapplication.R;
 
 import java.util.List;
 
 public class DecoAdapter extends RecyclerView.Adapter<DecoAdapter.DecoViewHolder>{
-    private List<Deco> decos;
+    private List<Deco> mListDeco;
+
     public void setData(List<Deco>list){
-        this.decos=list;
+        this.mListDeco=list;
         notifyDataSetChanged();
 
     }
@@ -36,7 +37,8 @@ public class DecoAdapter extends RecyclerView.Adapter<DecoAdapter.DecoViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull DecoViewHolder holder, int position) {
-        Deco deco=decos.get(position);
+
+        Deco deco=mListDeco.get(position);
         if(deco==null){
             return;
         }
@@ -45,18 +47,19 @@ public class DecoAdapter extends RecyclerView.Adapter<DecoAdapter.DecoViewHolder
         holder.txtUserDeco.setText(deco.getUserDeco());
         holder.txtTimeDeco.setText(deco.getTimeDeco());
 
-
     }
 
     @Override
     public int getItemCount() {
-        if(decos!=null){
-            return decos.size();
+        if(mListDeco!=null){
+            return mListDeco.size();
         }
         return 0;
     }
 
     public class DecoViewHolder extends RecyclerView.ViewHolder{
+
+      //  private LinearLayout layoutItemDeco;
         private ImageView imgDeco;
         private TextView txtNameDeco;
         private TextView txtUserDeco;

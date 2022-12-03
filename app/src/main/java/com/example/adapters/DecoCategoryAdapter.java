@@ -10,6 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.interfaces.IClickItemDecoListener;
+import com.example.models.Deco;
 import com.example.models.DecoCategory;
 import com.example.moroapplication.R;
 
@@ -20,7 +22,9 @@ public class DecoCategoryAdapter extends RecyclerView.Adapter<DecoCategoryAdapte
     private Context mContext;
     private List<DecoCategory>mlistDecoCategory;
 
-    public DecoCategoryAdapter(Context mContext) {
+
+    public DecoCategoryAdapter (Context mContext )
+    {
         this.mContext = mContext;
     }
     public void setData(List<DecoCategory>list){
@@ -38,18 +42,16 @@ public class DecoCategoryAdapter extends RecyclerView.Adapter<DecoCategoryAdapte
 
     @Override
     public void onBindViewHolder(@NonNull CategoryViewHolder holder, int position) {
-        DecoCategory decoCategory=mlistDecoCategory.get(position);
-        if(decoCategory==null){
+        DecoCategory decoCategory = mlistDecoCategory.get(position);
+        if (decoCategory == null) {
             return;
         }
         holder.txtNameCategory.setText(decoCategory.getNameCategory());
-        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(mContext, RecyclerView.HORIZONTAL,false);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false);
         holder.rcvDeco.setLayoutManager(linearLayoutManager);
         DecoAdapter decoAdapter=new DecoAdapter();
         decoAdapter.setData(decoCategory.getDeco());
         holder.rcvDeco.setAdapter(decoAdapter);
-
-
 
     }
 
