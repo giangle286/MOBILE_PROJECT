@@ -1,0 +1,70 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            android:gravity="left">
+        </ImageView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ten dang nhap"
+            android:textColor="#860000"
+            android:textStyle="bold"
+            android:layout_gravity="left"
+            android:textSize="15sp">
+        </TextView>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your username"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/edt_username">
+        </EditText>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="So dien thoai"
+        android:textColor="#860000"
+        android:textStyle="bold"
+        android:layout_gravity="left"
+        android:textSize="15sp">
+    </TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your phone number"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/edt_phone">
+    </EditText>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dia chi email"
+        android:textColor="#860000"
+        android:textStyle="bold"
+        android:layout_gravity="left"
+        android:textSize="15sp">
+    </TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your email"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/edt_email">
+    </EditText>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cap nhat"
+        android:layout_gravity="center">
+    </Button>
+</LinearLayout>
