@@ -218,7 +218,14 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Activity_Success_Register"
+            android:name=".Activity_Reset_Password"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity_Forgot_Pass"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
