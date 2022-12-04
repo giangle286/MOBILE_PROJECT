@@ -45,3 +45,4 @@ public class Blog {
 //        Image = image;
 //    }
 }
+//
