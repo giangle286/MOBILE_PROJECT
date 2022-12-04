@@ -3,6 +3,7 @@ package com.example.models;
 public class Blog {
     private String TitleBlog;
     private int ImageBlog;
+    private String TimeBlog;
 
     public String getTitleBlog() {
         return TitleBlog;
@@ -10,6 +11,14 @@ public class Blog {
 
     public void setTitleBlog(String titleBlog) {
         TitleBlog = titleBlog;
+    }
+
+    public String getTimeBlog() {
+        return TimeBlog;
+    }
+
+    public void setTimeBlog(String timeBlog) {
+        TimeBlog = timeBlog;
     }
 
     public int getImageBlog() {
@@ -20,28 +29,9 @@ public class Blog {
         ImageBlog = imageBlog;
     }
 
-    public Blog(String titleBlog, int imageBlog) {
+    public Blog(String titleBlog, int imageBlog, String timeBlog) {
         TitleBlog = titleBlog;
         ImageBlog = imageBlog;
+        TimeBlog = timeBlog;
     }
-//    public Blog(String content, int image) {
-//        Content = content;
-//        Image = image;
-//    }
-//
-//    public String getContent() {
-//        return Content;
-//    }
-//
-//    public void setContent(String content) {
-//        Content = content;
-//    }
-//
-//    public int getImage() {
-//        return Image;
-//    }
-//
-//    public void setImage(int image) {
-//        Image = image;
-//    }
 }

@@ -10,8 +10,9 @@
         android:id="@+id/imvImage"
         android:src="@drawable/muanha"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:scaleType="centerCrop"
+        android:layout_height="300dp"
+        android:scaleType="fitCenter"
+        android:background="#E3BAB0"
         app:layout_constraintTop_toTopOf="parent"
         />
     <TextView
@@ -51,7 +52,7 @@
                 android:src="@drawable/ic_baseline_access_time_24" />
 
             <TextView
-                android:id="@+id/txt_TimeDeco"
+                android:id="@+id/txt_timeBlog"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"

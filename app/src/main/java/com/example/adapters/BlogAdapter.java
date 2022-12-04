@@ -50,6 +50,7 @@ public class BlogAdapter extends BaseAdapter {
             holder=new ViewHolder();
             view =inflater.inflate(layout,null);
             holder.imvBlog=view.findViewById(R.id.imvImage);
+            holder.txtTimeBlog=view.findViewById(R.id.txt_timeBlog);
             holder.txtTitleBlog=view.findViewById(R.id.txt_titleBlog);
             holder.imvReact=view.findViewById(R.id.imv_ic_tim);
             holder.imvCmt=view.findViewById(R.id.imv_ic_cmt);
@@ -63,12 +64,8 @@ public class BlogAdapter extends BaseAdapter {
         Blog b = blogList.get(i);
         holder.txtTitleBlog.setText(b.getTitleBlog());
         holder.imvBlog.setImageResource(b.getImageBlog());
+        holder.txtTimeBlog.setText(b.getTimeBlog());
 
-//        products b = beers.get(i);
-//
-//        holder.imvbeer.setImageResource(b.getImvbeer());
-//        holder.txtname.setText(b.getName());
-//        return view;
 
         holder.imvReact.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,7 +92,7 @@ public class BlogAdapter extends BaseAdapter {
         return view;
     }
     public static class ViewHolder {
-        TextView txtTitleBlog;
+        TextView txtTitleBlog, txtTimeBlog;
         ImageView imvBlog;
         ImageView imvReact, imvCmt;
 
