@@ -15,9 +15,14 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="chitietbaiviet1">Nên Sơn Nhà Màu Nào Để Bán Được Giá Cao Hơn Hàng Chục, Hàng Trăm Triệu? </string>
-    <string name="title_activity_hienthisautimkiem">activity_hienthisautimkiem</string>
-    <string name="title_activity_trangsautimkiem">activity_trangsautimkiem</string>
+    <string name="chitietbaiviet1">Nên Sơn Nhà Màu Nào Để Bán Được Giá Cao Hơn Hàng Chục, Hàng Trăm Triệu?</string>
+    <string name="chitietbaiblog">
+        Tùy theo nhu cầu thuê trọ của mỗi người, để đánh giá được một phòng trọ có chất lượng tốt hay không thì phải dựa trên nhiều tiêu chí khác nhau. Trong bài viết này, Moro sẽ nêu ra 6 tiêu chí quan trọng để đánh giá chất lượng của một căn phòng trọ, các bạn trong quá trình đi tìm thuê nhà trọ có thể xem tham khảo và áp dụng để chọn lọc thuê cho mình một căn phòng trọ tốt, phù hợp với nhu cầu bản thân.
+
+        Tùy theo nhu cầu thuê trọ của mỗi người, để đánh giá được một phòng trọ có chất lượng tốt hay không thì phải dựa trên nhiều tiêu chí khác nhau. Trong bài viết này, Moro sẽ nêu ra 6 tiêu chí quan trọng để đánh giá chất lượng của một căn phòng trọ, các bạn trong quá trình đi tìm thuê nhà trọ có thể xem tham khảo và áp dụng để chọn lọc thuê cho mình một căn phòng trọ tốt, phù hợp với nhu cầu bản thân.
+
+        Tùy theo nhu cầu thuê trọ của mỗi người, để đánh giá được một phòng trọ có chất lượng tốt hay không thì phải dựa trên nhiều tiêu chí khác nhau. Trong bài viết này, Moro sẽ nêu ra 6 tiêu chí quan trọng để đánh giá chất lượng của một căn phòng trọ, các bạn trong quá trình đi tìm thuê nhà trọ có thể xem tham khảo và áp dụng để chọn lọc thuê cho mình một căn phòng trọ tốt, phù hợp với nhu cầu bản thân.</string>
+
 
 </resources>
 

@@ -17,10 +17,11 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
-
 public class Activity_Blog extends AppCompatActivity {
 
     ActivityBlogBinding binding;
+
+
 
     TextView txtContent;
     ListView lvBlog;
@@ -32,24 +33,11 @@ public class Activity_Blog extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blog);
-        bottomNav();
         binding = ActivityBlogBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         loadData();
+        bottomNav();
 //        selectedbeer();
-
-    }
-
-    private void loadData() {
-        blogList = new ArrayList<>();
-        blogList.add(new Blog("XEM TUỔI XÂY/LÀM NHÀ", R.drawable.tipsmuanha));
-        blogList.add(new Blog("Nên Sơn Nhà Màu Nào Để Bán Được Giá Cao Hơn Hàng Chục, Hàng Trăm Triệu?", R.drawable.sonnha));
-        blogList.add(new Blog("Hỏi Gì Cũng Đáp Về BĐS", R.drawable.hoidap));
-        blogList.add(new Blog("KINH NGHIỆM MUA BÁN NHÀ", R.drawable.nhachobolg));
-        blogList.add(new Blog("5 Lợi Ích Khi Giao Dịch Bất Động Sản Qua Các Website Nhà Đất Uy Tín", R.drawable.loiich));
-        blogList.add(new Blog("Mua BĐS ven sông: lợi nhuận tốt", R.drawable.quan2));
-        adapter = new BlogAdapter(Activity_Blog.this, R.layout.item_blog,blogList);
-        binding.lvBlogsample.setAdapter(adapter);
 
     }
 
@@ -70,12 +58,10 @@ public class Activity_Blog extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.action_news:
-
+                        startActivity(new Intent(getApplicationContext(),Activity_Blog.class));
+                        overridePendingTransition(0,0);
                         return true;
                     case R.id.action_decor:
-                        startActivity(new Intent(getApplicationContext(),Activity_Deco.class));
-                        overridePendingTransition(0,0);
-
                         return true;
                     case R.id.action_notification:
                         startActivity(new Intent(getApplicationContext(),Activity_Notification.class));
@@ -88,4 +74,21 @@ public class Activity_Blog extends AppCompatActivity {
             }
         });
     }
+
+
+    private void loadData() {
+        blogList = new ArrayList<>();
+        blogList.add(new Blog("XEM TUỔI XÂY/LÀM NHÀ", R.drawable.tipsmuanha, "30 phút trước"));
+        blogList.add(new Blog("Nên Sơn Nhà Màu Nào Để Bán Được Giá Cao Hơn Hàng Chục, Hàng Trăm Triệu?", R.drawable.sonnha, "1 giờ trước"));
+        blogList.add(new Blog("Hỏi Gì Cũng Đáp Về BĐS", R.drawable.hoidap, "9 giờ trước"));
+        blogList.add(new Blog("KINH NGHIỆM MUA BÁN NHÀ", R.drawable.nhachobolg, "1 ngày trước"));
+        blogList.add(new Blog("5 Lợi Ích Khi Giao Dịch Bất Động Sản Qua Các Website Nhà Đất Uy Tín", R.drawable.loiich, "2 ngày trước"));
+        blogList.add(new Blog("Mua BĐS ven sông: lợi nhuận tốt", R.drawable.quan2,"1 tuần trước"));
+        adapter = new BlogAdapter(Activity_Blog.this, R.layout.item_blog,blogList);
+        binding.lvBlogsample.setAdapter(adapter);
+
+//
+    }
+
+
 }
