@@ -1,34 +1,151 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:orientation="vertical"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
     android:padding="10dp">
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical">
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_arrow_back_ios_24">
-        </ImageView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tài khoản"
-            android:textColor="#860000"
-            android:textStyle="bold"
-            android:layout_gravity="center"
-            android:textSize="23sp">
-        </TextView>
-    </LinearLayout>
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/lv_Account_Management"
-        android:layout_marginTop="10dp">
-    </ListView>
-</LinearLayout>
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:src="@drawable/ic_baseline_arrow_back_ios_24">
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Tài khoản"
+                android:textColor="#860000"
+                android:textSize="23sp"
+                android:textStyle="bold">
+            </TextView>
+        </LinearLayout>
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:fillViewport="true"
+            android:layout_marginTop="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txtDetailPolicy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_bold"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:text="1. Về chúng tôi"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="5dp"
+                    android:paddingTop="5dp"
+                    android:justificationMode="inter_word"
+                    android:text="GaMi Đảm bảo thực hiện bởi GaMi, theo yêu cầu của Người dùng, để hỗ trợ Người dùng trong việc giải quyết các xung đột có thể phát sinh trong quá trình giao dịch. Người dùng có thể liên hệ với nhau để thỏa thuận về việc giải quyết tranh chấp của họ hoặc báo cáo lên GaMi hoặc cơ quan nhà nước có thẩm quyền để được hỗ trợ trong việc giải quyết bất kỳ tranh chấp xảy ra trước, trong hoặc sau khi sử dụng GaMi Đảm bảo."/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_bold"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingTop="5dp"
+                    android:text="2. Chính sách bảo mật"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="5dp"
+                    android:paddingTop="5dp"
+                    android:text="Người mua đồng ý rằng cô ấy/anh ấy chỉ có thể yêu cầu trả hàng và hoàn tiền trong các trường hợp sau:"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="10dp"
+                    android:text="- Người mua đã thanh toán nhưng (i) không nhận được sản phẩm, hoặc (ii) không nhận được toàn bộ các sản phẩm đã đặt, hoặc (iii) nhận được sản phẩm là hàng giả, hàng nhái;"
+                    android:justificationMode="inter_word"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp" android:paddingStart="10dp"
+                    android:text="- Sản phẩm bị lỗi hoặc bị hư hại trong quá trình vận chuyển;"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="10dp"
+                    android:justificationMode="inter_word"
+                    android:text="- Người bán giao sai sản phẩm cho Người mua (ví dụ: sai kích cỡ, sai màu sắc, v.vv...);"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="10dp"
+                    android:justificationMode="inter_word"
+                    android:text="- Sản phẩm Người mua nhận được khác biệt một cách rõ rệt so với thông tin mà Người bán cung cấp trong mục mô tả sản phẩm;"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="10dp"
+                    android:justificationMode="inter_word"
+
+                    android:text="- Sản phẩm bị trả lại không phải là Sản phẩm hạn chế trả hàng;"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_bold"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingTop="5dp"
+                    android:text="3. Liên hệ trợ giúp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="5dp"
+                    android:paddingTop="5dp"
+                    android:justificationMode="inter_word"
+                    android:text="Người mua đồng ý rằng cô ấy/anh ấy chỉ có thể yêu cầu trả hàng và hoàn tiền trong các trường hợp sau:"
+                    android:textAlignment=""/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
