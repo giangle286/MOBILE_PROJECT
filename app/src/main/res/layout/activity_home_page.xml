@@ -89,10 +89,9 @@
     </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_weight="1"
         android:id="@+id/menu_navigation"
         android:layout_width="match_parent"
-        android:layout_marginTop="685dp"
+        android:layout_marginTop="600dp"
         android:layout_height="50dp"
         app:itemIconSize="30dp"
         app:itemIconTint="@color/purple_700"

@@ -139,35 +139,35 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-         <activity
+        <activity
             android:name=".Activity_Profile_Detail2"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-         <activity
+        <activity
             android:name=".Activity_Profile_Detail3"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-         <activity
+        <activity
             android:name=".Activity_Profile_Detail4"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-         <activity
+        <activity
             android:name=".Activity_Profile_Detail5"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-         <activity
+        <activity
             android:name=".Activity_Profile_Detail6"
             android:exported="false">
             <meta-data
@@ -216,7 +216,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-         <activity
+        <activity
             android:name=".Activity_Room_Details"
             android:exported="false">
             <meta-data
@@ -225,13 +225,6 @@
         </activity>
         <activity
             android:name=".Activity_SharedRoom_Details"
-             android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".Activity_Success_Register"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -253,7 +246,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-          android:exported="false">
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
