@@ -209,6 +209,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+     
         <activity
             android:name=".Activity_SharedRoom_Details"
             android:exported="false">
@@ -230,13 +231,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-         <activity
-            android:name=".Activity_shareroom"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+         
          <activity
             android:name=".Activity_tranghienthisautimkiem"
             android:exported="false">
