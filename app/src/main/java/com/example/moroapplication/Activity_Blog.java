@@ -17,6 +17,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
+
 public class Activity_Blog extends AppCompatActivity {
 
     ActivityBlogBinding binding;
@@ -69,10 +70,12 @@ public class Activity_Blog extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.action_news:
+
                         return true;
                     case R.id.action_decor:
                         startActivity(new Intent(getApplicationContext(),Activity_Deco.class));
                         overridePendingTransition(0,0);
+
                         return true;
                     case R.id.action_notification:
                         startActivity(new Intent(getApplicationContext(),Activity_Notification.class));

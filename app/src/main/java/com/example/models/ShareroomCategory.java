@@ -1,5 +1,6 @@
 package com.example.models;
 
+
 import java.util.List;
 
 public class ShareroomCategory {
@@ -26,4 +27,5 @@ public class ShareroomCategory {
         this.nameshareroomCategory = nameshareroomCategory;
         this.shareroom = shareroom;
     }
+
 }
