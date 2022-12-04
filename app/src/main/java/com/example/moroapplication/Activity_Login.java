@@ -1,18 +1,11 @@
 package com.example.moroapplication;
 
-import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -22,6 +15,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.database.AccountDB;
+import com.example.moroapplication.databinding.ActivityLoginBinding;
 import com.facebook.AccessToken;
 import com.facebook.AccessTokenTracker;
 import com.facebook.CallbackManager;
@@ -29,6 +23,7 @@ import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
 import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
@@ -42,8 +37,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 
 import org.json.JSONException;
+import org.json.JSONObject;
 
 public class Activity_Login extends AppCompatActivity {
+
+    ActivityLoginBinding binding;
 
     //nút FB
     private LoginButton btnFb;
@@ -57,55 +55,57 @@ public class Activity_Login extends AppCompatActivity {
     AccountDB DB;
     TextInputEditText edtEmail, edtPass;
     CheckBox chkRemember;
-    Dialog dialogWait;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
-        setContentView(R.layout.activity_login);
+        //setContentView(R.layout.activity_login);
 
-        btnRegister = findViewById(R.id.btnRegister);
-        btnForgotPass = findViewById(R.id.btnForgotPass);
-        btnLogin = findViewById(R.id.btnLogin);
-        chkRemember = findViewById(R.id.chkRemember);
-        edtEmail = findViewById(R.id.edtEmail);
-        edtPass = findViewById(R.id.edtPass);
-        btnFb = findViewById(R.id.btnFb);
+        binding = ActivityLoginBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        FB = binding.FB;
+        GG = binding.GG;
+        btnLogin = binding.btnLogin;
+        btnRegister = binding.btnRegister;
+        btnForgotPass = binding.btnForgotPass;
+        edtEmail = binding.edtEmail;
+        edtPass = binding.edtPass;
+        chkRemember = binding.chkRemember;
+
         DB = new AccountDB(this);
-        FB = findViewById(R.id.FB);
-        GG = findViewById(R.id.GG);
 
-       // Đăng nhập bằng Facebook
-            callbackManager = CallbackManager.Factory.create();
-            btnFb.setReadPermissions("email");
-            // Callback registration
-            FB.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (view == FB) {
-                        btnFb.performClick();
-                    }
+ // Đăng nhập bằng Facebook
+        callbackManager = CallbackManager.Factory.create();
+        binding.btnFb.setReadPermissions("email");
+        // Callback registration
+        FB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (view == FB) {
+                    btnFb.performClick();
                 }
-            });
+            }
+        });
+
             btnFb.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
                 @Override
                 public void onSuccess(LoginResult loginResult) {
-                    Log.d("Moro","Đăng nhập thành công!" );
+                    Log.d("Moro", "Đăng nhập thành công!" + loginResult);
                 }
 
                 @Override
                 public void onCancel() {
-                    Log.d("Moro","Hủy" );
+                    Log.d("Moro", "Hủy đăng nhập!");
                 }
 
                 @Override
-                public void onError(FacebookException exception) {
-                    Log.d("Moro","Đăng nhập không thành công" );
+                public void onError(FacebookException error) {
+                    Log.d("Moro", "Đăng nhập không thành công" + error);
                 }
             });
             LoginManager.getInstance().logOut();
-
             //Đăng nhập bằng Google
             GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                     .requestEmail()
@@ -120,6 +120,8 @@ public class Activity_Login extends AppCompatActivity {
                     if (view == GG) {
                         signInButton.performClick();
                         signIn();
+                        // thông báo đăng nhập thành công
+                        Toast.makeText(Activity_Login.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
                     }
                 }
             });
@@ -134,6 +136,7 @@ public class Activity_Login extends AppCompatActivity {
                 Toast.makeText(Activity_Login.this, "Hãy đăng nhập", Toast.LENGTH_SHORT).show();
             }
 
+            //Đăng nhập bằng tài khoản
             btnLogin.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -141,34 +144,23 @@ public class Activity_Login extends AppCompatActivity {
                     String email=edtEmail.getText().toString();
                     String pass=edtPass.getText().toString();
 
+                    //kiểm tra email và pass có trống hay không
                     if(email.equals("")||pass.equals(""))
-                        Toast.makeText(Activity_Login.this, "Bạn hãy điền đầy đủ thông tin", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Activity_Login.this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                     else{
-                        boolean checkemailpass = DB.checkemailpassword(email, pass);
+                        Boolean checkemailpass = DB.checkemailpassword(email,pass);
                         if(checkemailpass==true){
                             Toast.makeText(Activity_Login.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
-                            dialogWait = new Dialog(Activity_Login.this);
-                            dialogWait.requestWindowFeature(Window.FEATURE_NO_TITLE);
-                            dialogWait.setContentView(R.layout.dialog_wait);
-                            dialogWait.setCanceledOnTouchOutside(false);
-                            dialogWait.show();
-                            new CountDownTimer(5000,100){
-
-                                @Override
-                                public void onTick(long l) {
-
-                                }
-
-                                @Override
-                                public void onFinish() {
-                                    dialogWait.dismiss();
-                                }
-                            }.start();
-
                             Intent intent = new Intent(Activity_Login.this, HomePage.class);
                             startActivity(intent);
-                        }else{
-                            Toast.makeText(Activity_Login.this, "Đăng nhập không thành công", Toast.LENGTH_SHORT).show();
+                            //remember me
+                            SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+                            SharedPreferences.Editor editor = preferences.edit();
+                            editor.putString("remember", "true");
+                            editor.apply();
+                        }
+                        else{
+                            Toast.makeText(Activity_Login.this, "Đăng nhập không thành công, vui lòng thử lại!", Toast.LENGTH_SHORT).show();
                         }
                     }
 
@@ -193,122 +185,21 @@ public class Activity_Login extends AppCompatActivity {
                 }
             });
 
+            //chuyển đến trang đăng ký
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Activity_Login.this, Activity_Register.class));
+            }
+        });
+
+            // quên mật khẩu
             btnForgotPass.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    openForgotPassDialog(Gravity.BOTTOM);
+                    startActivity(new Intent(Activity_Login.this, Activity_Forgot_Pass.class));
                 }
             });
-
-            btnRegister.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    startActivity(new Intent(Activity_Login.this, Activity_Register.class));
-                }
-            });
-
-        }
-
-        private void openForgotPassDialog(int gravity) {
-            final Dialog dialog = new Dialog(this);
-            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-            dialog.setContentView(R.layout.layout_dialog_forgotpass);
-
-            Window window = dialog.getWindow();
-            if (window == null) {
-                return;
-            }
-            window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
-            window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-
-            WindowManager.LayoutParams windowAttribute = window.getAttributes();
-            windowAttribute.gravity = gravity;
-            window.setAttributes(windowAttribute);
-
-            if (Gravity.BOTTOM == gravity) {
-                dialog.setCancelable(true);
-            } else {
-                dialog.setCancelable(false);
-            }
-            dialog.show();
-
-            Button btnContinue = dialog.findViewById(R.id.btnContinue);
-            TextInputEditText edtEmailVerify=dialog.findViewById(R.id.edtEmailVerify);
-
-            //mở dialog thứ 2
-            btnContinue.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    String mail = edtEmailVerify.getText().toString();
-                    Bundle bundle = new Bundle();
-                    bundle.putString("mail", mail);
-
-                    boolean checkmail = DB.checkemail(mail);
-                    if (checkmail==true){
-                        openResetPassDialog(Gravity.BOTTOM, bundle);
-                        dialog.dismiss();
-                    }else{
-                        Toast.makeText(Activity_Login.this,"Tài khoản không tồn tại", Toast.LENGTH_LONG).show();
-                    }
-                }
-            });
-        }
-
-
-
-        private void openResetPassDialog(int gravity, Bundle bundle) {
-            final Dialog dialog1 = new Dialog(this);
-            dialog1.requestWindowFeature(Window.FEATURE_NO_TITLE);
-            dialog1.setContentView(R.layout.layout_dialog_resetpass);
-
-            Window window = dialog1.getWindow();
-            if (window == null) {
-                return;
-            }
-            window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
-            window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-
-            WindowManager.LayoutParams windowAttribute = window.getAttributes();
-            windowAttribute.gravity = gravity;
-            window.setAttributes(windowAttribute);
-
-            if (Gravity.CENTER == gravity) {
-                dialog1.setCancelable(true);
-            } else {
-                dialog1.setCancelable(false);
-            }
-            dialog1.show();
-
-            FrameLayout btnReset = dialog1.findViewById(R.id.btnReset);
-            TextInputEditText edtMk = dialog1.findViewById(R.id.edtMk);
-            TextInputEditText edtReMk = dialog1.findViewById(R.id.edtReMk);
-
-            //reset lại mật khẩu
-            btnReset.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View view) {
-                    //cần đưa email về
-                    String mail = bundle.getString("mail");
-                    String newpass = edtMk.getText().toString();
-                    String newrepass=edtReMk.getText().toString();
-                    if(newpass.equals(newrepass)){
-
-                        boolean checkpasswordupdate = DB.updatepassword(mail, newpass);
-                        if(checkpasswordupdate==true){
-                            dialog1.dismiss();
-                            Toast.makeText(Activity_Login.this, "Thay đổi mật khẩu thành công!", Toast.LENGTH_SHORT).show();
-                        }else{
-                            Toast.makeText(Activity_Login.this, "Thay đổi mật khẩu không thành công!", Toast.LENGTH_SHORT).show();
-                        }
-
-                    }else{
-                        Toast.makeText(Activity_Login.this, "Mật khẩu nhập không khớp", Toast.LENGTH_SHORT).show();
-                    }
-
-                }
-            });
-
         }
 
         private void signIn() {
@@ -355,7 +246,6 @@ public class Activity_Login extends AppCompatActivity {
             }
         }
 
-
         AccessTokenTracker t = new AccessTokenTracker() {
             @Override
             protected void onCurrentAccessTokenChanged(AccessToken oldAccessToken, AccessToken currentAccessToken) {
@@ -374,22 +264,23 @@ public class Activity_Login extends AppCompatActivity {
         };
 
         private void loaduserProfile(AccessToken newAccessToken) {
-            GraphRequest request = GraphRequest.newMeRequest(newAccessToken, ((object, response) -> {
-                if(object!=null){
-                    try{
-                        String email = object.getString("email");
-                        String id = object.getString("id");
-
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-
-            }));
+            GraphRequest request = GraphRequest.newMeRequest(newAccessToken, (this::onCompleted));
             Bundle parameters = new Bundle();
             parameters.putString("fields", "email,name,id");
             request.setParameters(parameters);
             request.executeAsync();
         }
 
+    private void onCompleted(JSONObject object, GraphResponse response) {
+        if (object != null) {
+            try {
+                String email = object.getString("email");
+                String id = object.getString("id");
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
 }
