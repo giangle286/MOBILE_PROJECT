@@ -57,7 +57,10 @@
         android:id="@+id/lv_blogsample"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:divider="@drawable/divider"
+        android:padding="5dp"/>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/menu_navigation"
         android:layout_width="match_parent"
