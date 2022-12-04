@@ -80,5 +80,4 @@ public class TrosautimkiemAdapter extends BaseAdapter {
         }
 
     }
-
-
+    //Đây là nhanh tro tìm kiếm
