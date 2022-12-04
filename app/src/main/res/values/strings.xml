@@ -15,6 +15,9 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="chitietbaiviet1">Nên Sơn Nhà Màu Nào Để Bán Được Giá Cao Hơn Hàng Chục, Hàng Trăm Triệu? </string>
+    <string name="title_activity_hienthisautimkiem">activity_hienthisautimkiem</string>
+    <string name="title_activity_trangsautimkiem">activity_trangsautimkiem</string>
 
 </resources>
 
