@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity_Blog"
+    tools:context=".activity_tranghienthisautimkiem"
     android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bản tin"
+        android:text="Trang sau tìm kiếm"
         android:textSize="25dp"
         android:padding="10dp"
         android:textColor="#993B22"
@@ -22,7 +23,7 @@
         android:orientation="horizontal"
         android:padding="5dp">
         <android.widget.SearchView
-            android:id="@+id/simpleSearchView"
+            android:id="@+id/simpleSearchView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <EditText
@@ -45,22 +46,19 @@
             android:gravity="left"
             android:textStyle="bold"
             android:layout_marginLeft="10dp"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Xem thêm"
-            android:gravity="right"
-            android:textColor="#993B22"
-            android:layout_marginRight="10dp"/>
+
     </LinearLayout>
-    <ListView
-        android:id="@+id/lv_blogsample"
+
+    <GridView
+        android:id="@+id/gv_sautimkiem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:layout_margin="10dp"
+        android:layout_weight="1"
         android:divider="@drawable/divider"
-        android:padding="5dp"/>
+        android:numColumns="2"
+        android:padding="5dp" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/menu_navigation"
         android:layout_width="match_parent"

@@ -50,20 +50,6 @@ public class Activity_Blog extends AppCompatActivity {
         adapter = new BlogAdapter(Activity_Blog.this, R.layout.item_blog,blogList);
         binding.lvBlogsample.setAdapter(adapter);
 
-//        adapter = new BeerAdapter(MainActivity.this, R.layout.activity_beers,beerlist);
-//        binding.gvBeers.setAdapter(adapter);
-
-
-//        beerlist = new ArrayList<>();
-//        beerlist.add(new products("Sài Gòn", R.drawable.saigon));
-//        beerlist.add(new products("Hà Nội", R.drawable.hanoi));
-//        beerlist.add(new products("Tiger", R.drawable.tiger));
-//        beerlist.add(new products("Heineken", R.drawable.heineken));
-//        beerlist.add(new products("Bia 333", R.drawable.beer333));
-//        beerlist.add(new products("Sapporo", R.drawable.sapporo));
-//        beerlist.add(new products("Larue", R.drawable.larue));
-//        adapter = new BeerAdapter(MainActivity.this, R.layout.activity_beers,beerlist);
-//        binding.gvBeers.setAdapter(adapter);
     }
 
     private void bottomNav() {
