@@ -22,6 +22,7 @@ public class Activity_Reset_Password extends AppCompatActivity {
        // setContentView(R.layout.activity_reset_password);
         binding = ActivityResetPasswordBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        DB=new AccountDB(this);
 
         // Đặt lại mật khẩu
         btnResetPass = binding.btnResetPass;
@@ -41,8 +42,7 @@ public class Activity_Reset_Password extends AppCompatActivity {
                 // Kiểm tra mật khẩu mới và nhập lại mật khẩu mới có trùng nhau không
                 if(pass.equals(repass)){
                     // Cập nhật mật khẩu mới
-                    DB.updatepassword(email, pass);
-                    boolean checkupdate=DB.updatepassword(email, pass);
+                    boolean checkupdate = DB.updatepassword(email, pass);
                     if(checkupdate==true){
                         Toast.makeText(Activity_Reset_Password.this, "Đặt lại mật khẩu thành công! Hãy đăng nhập lại!", Toast.LENGTH_SHORT).show();
                     }else{ Toast.makeText(Activity_Reset_Password.this, "Đặt lại mật khẩu thất bại!", Toast.LENGTH_SHORT).show(); }

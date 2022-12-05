@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bản tin"
-        android:textSize="25dp"
+        android:textSize="20dp"
         android:padding="10dp"
         android:textColor="#993B22"
         android:textStyle="bold"
@@ -22,15 +22,13 @@
         android:orientation="horizontal"
         android:padding="5dp">
         <android.widget.SearchView
-            android:id="@+id/simpleSearchView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <EditText
-            android:id="@+id/inputSearch"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:hint="Tìm kiếm ...."
-            android:background="@drawable/stroke"/>
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/srv_Blog" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"
+            android:queryHint="Nhập tìm kiếm"
+            android:iconifiedByDefault="false"
+            android:background="@drawable/stroke"
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -41,26 +39,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bài đăng mới nhất "
+            android:text="Bản tin Moro luôn cập nhật những tin tức mới nhất "
             android:gravity="left"
             android:textStyle="bold"
             android:layout_marginLeft="10dp"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Xem thêm"
-            android:gravity="right"
-            android:textColor="#993B22"
-            android:layout_marginRight="10dp"/>
+
     </LinearLayout>
     <ListView
         android:id="@+id/lv_blogsample"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:layout_margin="10dp"
-        android:divider="@drawable/divider"
-        android:padding="5dp"/>
+        android:layout_margin="10dp" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/menu_navigation"
