@@ -232,7 +232,7 @@
                 android:value="" />
         </activity>
          <activity
-            android:name=".Activity_filter2"
+            android:name=".activity_filter2"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -240,7 +240,7 @@
         </activity>
          
          <activity
-            android:name=".Activity_tranghienthisautimkiem"
+            android:name=".activity_tranghienthisautimkiem"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
