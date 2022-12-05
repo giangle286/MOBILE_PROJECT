@@ -55,6 +55,13 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+          <activity
+            android:name=".Activity_Deco_Post"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
          <activity
             android:name=".Activity_Filter"
             android:exported="false">
@@ -146,36 +153,15 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".Activity_Profile_Detail3"
+         <activity
+            android:name=".Activity_Profile_Detail2_Update_Info"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".Activity_Profile_Detail4"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".Activity_Profile_Detail5"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".Activity_Profile_Detail6"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".Activity_Profile_Detail2"
+         <activity
+            android:name=".Activity_Profile_Detail2_Update_Password"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -189,7 +175,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Activity_Profile_Detail4"
+            android:name=".Activity_Profile_Detail4_Logout"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -223,6 +209,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+     
         <activity
             android:name=".Activity_SharedRoom_Details"
             android:exported="false">
@@ -231,7 +218,29 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Activity_Success_Register"
+            android:name=".Activity_Reset_Password"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity_Forgot_Pass"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+         <activity
+            android:name=".Activity_filter2"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+         
+         <activity
+            android:name=".Activity_tranghienthisautimkiem"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
