@@ -57,7 +57,7 @@ public class AccountDB extends SQLiteOpenHelper {
     }
 
     // insert data in to Account table
-    public boolean insertData(String username, String email, String password, String phone, String address){
+    public boolean insertAccData(String username, String email, String password, String phone, String address){
         SQLiteDatabase MyDB = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_USERNAME, username);
@@ -120,5 +120,6 @@ public class AccountDB extends SQLiteOpenHelper {
         }
         return userid;
     }
+
 
 }
