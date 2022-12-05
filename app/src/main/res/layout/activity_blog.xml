@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bản tin"
-        android:textSize="25dp"
+        android:textSize="20dp"
         android:padding="10dp"
         android:textColor="#993B22"
         android:textStyle="bold"
@@ -22,15 +22,13 @@
         android:orientation="horizontal"
         android:padding="5dp">
         <android.widget.SearchView
-            android:id="@+id/simpleSearchView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <EditText
-            android:id="@+id/inputSearch"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:hint="Tìm kiếm ...."
-            android:background="@drawable/stroke"/>
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/srv_Blog" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"
+            android:queryHint="Nhập tìm kiếm"
+            android:iconifiedByDefault="false"
+            android:background="@drawable/stroke"
+            />
     </LinearLayout>
 
     <LinearLayout
