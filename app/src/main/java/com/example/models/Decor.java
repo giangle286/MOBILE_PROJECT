@@ -3,16 +3,26 @@ package com.example.models;
 import java.io.Serializable;
 
 public class Decor implements Serializable {
+    public static final int TYPE_VINTAGE = 1;
+    public static final int TYPE_TOIGIAN = 2;
+    public static final int TYPE_HIENDAI = 3;
+
     private int resourceImage;
     private String nameDecor;
     private String userDecor;
     private String timeDecor;
+    private int TypeDecor;
 
-    public Decor(int resourceImage, String nameDecor, String userDecor, String timeDecor) {
+
+
+    public Decor(int resourceImage, String nameDecor, String userDecor, String timeDecor, int typeDecor) {
+
         this.resourceImage = resourceImage;
+
         this.nameDecor = nameDecor;
         this.userDecor = userDecor;
         this.timeDecor = timeDecor;
+        this.TypeDecor= typeDecor;
     }
 
     public int getResourceImage() {
@@ -45,5 +55,9 @@ public class Decor implements Serializable {
 
     public void setTimeDecor(String timeDecor) {
         this.timeDecor = timeDecor;
+    }
+
+    public int getTypeDecor() {
+        return TypeDecor;
     }
 }
