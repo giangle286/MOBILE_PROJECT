@@ -75,7 +75,7 @@
     </LinearLayout>
 
     <ListView
-        android:id="@+id/lv_function"
+        android:id="@+id/lv_profile_function"
         android:layout_width="wrap_content"
         android:layout_height="282dp"
         android:layout_weight="1"
