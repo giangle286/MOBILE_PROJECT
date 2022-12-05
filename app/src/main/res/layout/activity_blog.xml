@@ -41,23 +41,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bài đăng mới nhất "
+            android:text="Bản tin Moro luôn cập nhật những tin tức mới nhất "
             android:gravity="left"
             android:textStyle="bold"
             android:layout_marginLeft="10dp"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Xem thêm"
-            android:gravity="right"
-            android:textColor="#993B22"
-            android:layout_marginRight="10dp"/>
+
     </LinearLayout>
     <ListView
         android:id="@+id/lv_blogsample"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:layout_margin="10dp" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/menu_navigation"
         android:layout_width="match_parent"
@@ -70,6 +66,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu"></com.google.android.material.bottomnavigation.BottomNavigationView>
+
 
 
 

@@ -74,11 +74,16 @@
                 android:text="Đăng tin"
                 android:background="@drawable/stroke"/>
         </LinearLayout>
-
+        <GridView
+            android:id="@+id/gv_homepageCategory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="2" />
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcv_homepageCategory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
 
 
     </LinearLayout>
@@ -86,7 +91,7 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/menu_navigation"
         android:layout_width="match_parent"
-        android:layout_marginTop="685dp"
+        android:layout_marginTop="600dp"
         android:layout_height="50dp"
         app:itemIconSize="30dp"
         app:itemIconTint="@color/purple_700"
