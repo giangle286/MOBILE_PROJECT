@@ -79,6 +79,8 @@ public class Activity_Blog_Details extends AppCompatActivity {
                 decoComment.add(new DecoComment(edtCmt.getText().toString(),"Ngọc Ngọc"));
                 decoCommentAdapter=new DecoCommentAdapter(Activity_Blog_Details.this,R.layout.item_cmt,decoComment);
                 lvCmt.setAdapter(decoCommentAdapter);
+                edtCmt.setText("");
+
             }
         });
     }
