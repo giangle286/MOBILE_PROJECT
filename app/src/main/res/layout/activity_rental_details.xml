@@ -3,9 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Activity_Room_Details"
+    android:layout_height="wrap_content"
+    tools:context=".activity_rental_details"
     android:orientation="vertical">
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -17,7 +18,7 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imv_roomImage"
+                android:id="@+id/imv_trochothue"
                 android:layout_width="match_parent"
                 android:layout_height="230dp"
                 android:layout_marginTop="10dp"
@@ -27,10 +28,10 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/sample1" />
+                app:srcCompat="@drawable/img_nt1" />
 
             <TextView
-                android:id="@+id/txt_Title"
+                android:id="@+id/txt_namerental"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -60,7 +61,7 @@
                         android:src="@drawable/ic_baseline_attach_money_24" />
 
                     <TextView
-                        android:id="@+id/txt_price_room"
+                        android:id="@+id/txt_price"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="5 triệu/ tháng"
@@ -74,33 +75,30 @@
                         android:orientation="horizontal">
 
                         <ImageButton
-                            android:id="@+id/imv_chat_room"
+                            android:id="@+id/imv_chat_shroom"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="8dp"
-                            android:background="@drawable/ic_baseline_chat_bubble_outline_24" />
-
+                            android:layout_height="wrap_content" android:background="@drawable/ic_baseline_chat_bubble_outline_24"
+                            android:layout_marginRight="8dp"/>
                         <CheckBox
-                            android:id="@+id/btn_like_room"
+                            android:id="@+id/btn_like_shroom"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
+                            android:scaleX="0.5"
                             android:layout_marginRight="8dp"
-                            android:background="@drawable/selector_tym"
                             android:button="@null"
+                            android:background="@drawable/selector_tym"
                             android:checked="false"
-                            android:scaleX="0.8"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toRightOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
-
                         <ImageView
-                            android:id="@+id/imv_save"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
+                            android:src="@drawable/ic_baseline_save_alt_24"
+                            android:id="@+id/imv_save"
                             android:scaleX="1.5"
-                            android:scaleY="1.5"
-                            android:src="@drawable/ic_baseline_save_alt_24" />
+                            android:scaleY="1.5"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -116,11 +114,11 @@
                         android:src="@drawable/ic_home_black_24dp" />
 
                     <TextView
-                        android:id="@+id/txt_square_metre"
+                        android:id="@+id/txt_square"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
-                        android:text="10m2"
+                        android:text="20m2"
                         android:textColor="#3E1A0A"
                         android:textSize="20sp" />
 
@@ -133,9 +131,9 @@
                         <ImageView
                             android:id="@+id/imv_call"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:scaleX="0.7"
                             android:scaleY="0.7"
+                            android:scaleX="0.7"
+                            android:layout_height="match_parent"
                             android:src="@drawable/img_phone" />
 
                         <Button
@@ -143,9 +141,9 @@
                             style="?android:attr/borderlessButtonStyle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="12dp"
                             android:text="0332204584"
-                            android:textColor="#993B22"
-                            android:textSize="12sp" />
+                            android:textColor="#993B22" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -165,8 +163,8 @@
                         android:id="@+id/txt_numberPeople_room"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="5dp"
                         android:text="3 người"
+                        android:layout_marginTop="5dp"
                         android:textColor="#3E1A0A"
                         android:textSize="20sp" />
 
@@ -189,9 +187,8 @@
                             android:layout_height="wrap_content"
                             android:text="Nhà trọ Kiệt"
                             android:textColor="#993B22"
-                            android:textSize="12sp" />
+                            android:textSize="12sp"/>
                     </LinearLayout>
-
                 </LinearLayout>
 
                 <LinearLayout
@@ -206,10 +203,10 @@
                         android:src="@drawable/ic_baseline_location_on_24" />
 
                     <TextView
-                        android:id="@+id/txt_address_room"
+                        android:id="@+id/txt_address"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="169/80, Võ Văn Ngân, Phường Bình Thọ, Thủ Đức"
+                        android:text="Võ Văn Tần, Quận 11"
                         android:textColor="#3E1A0A"
                         android:textSize="15sp" />
                 </LinearLayout>
@@ -225,22 +222,34 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/describe" />
+                app:layout_constraintTop_toBottomOf="@+id/view" />
 
             <TextView
-                android:id="@+id/txt_Description"
+                android:id="@+id/txt_Motatro"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="298dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 android:lineSpacingExtra="8sp"
-                android:text="Tùy theo nhu cầu thuê trọ của mỗi người, để đánh giá được một phòng trọ có chất lượng tốt hay không thì phải dựa trên nhiều tiêu chí khác nhau. Trong bài viết này, Moro sẽ nêu ra 6 tiêu chí quan trọng để đánh giá chất lượng của một căn phòng trọ, các bạn trong quá trình đi tìm thuê nhà trọ có thể xem tham khảo và áp dụng để chọn lọc thuê cho mình một căn phòng trọ tốt, phù hợp với nhu cầu bản thân. Tùy theo nhu cầu thuê trọ của mỗi người, để đánh giá được một phòng trọ có chất lượng tốt hay không thì phải dựa trên nhiều tiêu chí khác nhau. Trong bài viết này, Moro sẽ nêu ra 6 tiêu chí quan trọng để đánh giá chất lượng của một căn phòng trọ, các bạn trong quá trình đi tìm thuê nhà trọ có thể xem tham khảo và áp dụng để chọn lọc thuê cho mình một căn phòng trọ tốt, phù hợp với nhu cầu bản thân.Tùy theo nhu cầu thuê trọ của mỗi người, để đánh giá được một phòng trọ có chất lượng tốt hay không thì phải dựa trên nhiều tiêu chí khác nhau. Trong bài viết này, Moro sẽ nêu ra 6 tiêu chí quan trọng để đánh giá chất lượng của một căn phòng trọ, các bạn trong quá trình đi tìm thuê nhà trọ có thể xem tham khảo và áp dụng để chọn lọc thuê cho mình một căn phòng trọ tốt, phù hợp với nhu cầu bản thân."
-                android:textColor="#373737" />
+                android:text="Được trang bị:
++ 2 phòng ngủ, 1 toilet
++ Ban công view Landmark 81
++ Máy lạnh, quạt
++ Tủ lạnh
++ Máy giặc
++ Điện, nước, wifi, chỗ để xe tính theo tháng
++ WC riêng biệt trong phòng
++ Camera Và Khoá Vân tay phòng riêng và cổng nhà xe an toàn.
++ Giờ giấc tự do
+Hợp đồng 6-12 tháng
 
+"
+                android:textColor="#373737" />
 
         </LinearLayout>
 
     </ScrollView>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -253,7 +262,7 @@
             android:layout_width="60dp"
             android:layout_height="match_parent"
             android:layout_marginRight="3dp"
-            android:src="@drawable/img_ava" />
+            android:src="@drawable/img_ava" />/>
 
         <EditText
             android:id="@+id/edt_cmt_shroom"
@@ -274,10 +283,11 @@
             android:id="@+id/btn_cmt"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginLeft="6dp"
             android:layout_marginEnd="12dp"
             android:background="@drawable/edittext_button_style_rounded"
-            android:text="Đăng" />
+            android:text="Đăng"
+            android:layout_marginLeft="6dp"/>
 
     </LinearLayout>
+
 </LinearLayout>

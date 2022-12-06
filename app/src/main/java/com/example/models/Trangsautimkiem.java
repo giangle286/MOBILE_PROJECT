@@ -4,60 +4,59 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Trangsautimkiem {
-    private String txtnametimkiem;
-    private String txtgiatimkiem;
-    private String txtdientichtimkiem;
-    private int imvtimkiem;
-    private String txtdiachitimkiem;
+  //  private String Txtnametimkiem;
+    //  private String Txtgiatimkiem;
+ //   private String Txtdientichtimkiem;
+    private int Imvtimkiem;
+    private String Txtdiachitimkiem;
 
-    public String getTxtnametimkiem() {
-        return txtnametimkiem;
-    }
+   // public String getTxtnametimkiem() {
+ //       return Txtnametimkiem;
+ //   }
 
-    public void setTxtnametimkiem(String txtnametimkiem) {
-        this.txtnametimkiem = txtnametimkiem;
-    }
+   // public void setTxtnametimkiem(String txtnametimkiem) {
+   //     this.Txtnametimkiem = txtnametimkiem;
+  //  }
 
-    public String getTxtgiatimkiem() {
-        return txtgiatimkiem;
-    }
+ //   public String getTxtgiatimkiem() {
+ //       return Txtgiatimkiem;
+  //  }
 
-    public void setTxtgiatimkiem(String txtgiatimkiem) {
-        this.txtgiatimkiem = txtgiatimkiem;
-    }
+  //  public void setTxtgiatimkiem(String txtgiatimkiem) {
+  //      this.Txtgiatimkiem = txtgiatimkiem;
+  //  }
 
-    public String getTxtdientichtimkiem() {
-        return txtdientichtimkiem;
-    }
+  //  public String getTxtdientichtimkiem() {
+  //      return Txtdientichtimkiem;
+   // }
 
-    public void setTxtdientichtimkiem(String txtdientichtimkiem) {
-        this.txtdientichtimkiem = txtdientichtimkiem;
-    }
+  //  public void setTxtdientichtimkiem(String txtdientichtimkiem) {
+  //      this.Txtdientichtimkiem = txtdientichtimkiem;
+  //  }
 
     public int getImvtimkiem() {
-        return imvtimkiem;
+        return Imvtimkiem;
     }
 
     public void setImvtimkiem(int imvtimkiem) {
-        this.imvtimkiem = imvtimkiem;
+        this.Imvtimkiem = imvtimkiem;
     }
 
     public String getTxtdiachitimkiem() {
-        return txtdiachitimkiem;
+        return Txtdiachitimkiem;
     }
-
-
 
 
     public void setTxtdiachitimkiem(String txtdiachitimkiem) {
-        this.txtdiachitimkiem = txtdiachitimkiem;
+        this.Txtdiachitimkiem = txtdiachitimkiem;
     }
 
-    public Trangsautimkiem(String txtnametimkiem, String txtgiatimkiem, String txtdientichtimkiem, int imvtimkiem, String txtdiachitimkiem) {
-        txtnametimkiem = txtnametimkiem;
-        txtgiatimkiem = txtgiatimkiem;
-        txtdientichtimkiem = txtdientichtimkiem;
-        imvtimkiem = imvtimkiem;
-        txtdiachitimkiem = txtdiachitimkiem;
+    public Trangsautimkiem(int imvtimkiem, String txtdiachitimkiem) {
+    //    Txtnametimkiem = txtnametimkiem;
+     //   Txtgiatimkiem = txtgiatimkiem;
+     //   Txtdientichtimkiem = txtdientichtimkiem;
+        Imvtimkiem = imvtimkiem;
+        Txtdiachitimkiem = txtdiachitimkiem;
     }
 }
+//Trang sau tìm kiếm update

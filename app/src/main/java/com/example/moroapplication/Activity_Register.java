@@ -10,8 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.database.AccountDB;
 import com.google.android.material.textfield.TextInputEditText;
-
-public class Activity_Register extends AppCompatActivity {
+/*
+<public class Activity_Register extends AppCompatActivity {
 
     Button btnRegister;
     TextInputEditText edtName,edtEmail,edtPass,edtPassAgain;
@@ -65,3 +65,5 @@ public class Activity_Register extends AppCompatActivity {
                     });
     }
 }
+*/
+ 
