@@ -8,6 +8,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -30,11 +31,13 @@ public class Activity_Blog_Details extends AppCompatActivity {
     private EditText edtCmt;
     private TextView txtTitle, txtTime;
     private ImageView imvBlogDetails;
+    private ImageButton imbBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blog_details);
+        imbBack = findViewById(R.id.imb_backBlog);
         ExpandableTextView expTv1 =findViewById(R.id.expand_text_view);
         expTv1.setText(getString(R.string.chitietbaiblog));
         imvFavorite = findViewById(R.id.imv_Favorite);
@@ -42,7 +45,7 @@ public class Activity_Blog_Details extends AppCompatActivity {
 //        initAdapter();
         linkViews();
         addEvents();
-        initData();
+//        initData();
         showData();
 
 
@@ -79,6 +82,15 @@ public class Activity_Blog_Details extends AppCompatActivity {
                 decoComment.add(new DecoComment(edtCmt.getText().toString(),"Ngọc Ngọc"));
                 decoCommentAdapter=new DecoCommentAdapter(Activity_Blog_Details.this,R.layout.item_cmt,decoComment);
                 lvCmt.setAdapter(decoCommentAdapter);
+                edtCmt.setText("");
+
+            }
+        });
+        imbBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Activity_Blog_Details.this,Activity_Blog.class);
+                startActivity(intent);
             }
         });
     }
@@ -92,13 +104,12 @@ public class Activity_Blog_Details extends AppCompatActivity {
         txtTime = findViewById(R.id.txt_Time);
     }
 
-    private void initData() {
-        decoComment=new ArrayList<>();
-        decoComment.add(new DecoComment("Bài viết thật hữu ích","Giang Nguyễn"));
-        //decoComment.add(new DecoComment("Xịn quá ạ","Khánh Lê"));
-        decoCommentAdapter=new DecoCommentAdapter(Activity_Blog_Details.this,R.layout.item_cmt,decoComment);
-        lvCmt.setAdapter(decoCommentAdapter);
-        
-    }
+//    private void initData() {
+//        decoComment=new ArrayList<>();
+//        decoComment.add(new DecoComment("Bài viết thật hữu ích","Giang Nguyễn"));
+//        decoCommentAdapter=new DecoCommentAdapter(Activity_Blog_Details.this,R.layout.item_cmt,decoComment);
+//        lvCmt.setAdapter(decoCommentAdapter);
+//
+//    }
 
 }
