@@ -62,7 +62,7 @@
                     android:paddingStart="5dp"
                     android:paddingTop="5dp"
                     android:justificationMode="inter_word"
-                    android:text="GaMi Đảm bảo thực hiện bởi GaMi, theo yêu cầu của Người dùng, để hỗ trợ Người dùng trong việc giải quyết các xung đột có thể phát sinh trong quá trình giao dịch. Người dùng có thể liên hệ với nhau để thỏa thuận về việc giải quyết tranh chấp của họ hoặc báo cáo lên GaMi hoặc cơ quan nhà nước có thẩm quyền để được hỗ trợ trong việc giải quyết bất kỳ tranh chấp xảy ra trước, trong hoặc sau khi sử dụng GaMi Đảm bảo."/>
+                    android:text="   MORO là nền tảng cung cấp không gian dành cho những bạn tìm kiếm căn hộ và những người chủ cho thuê đang tìm kiếm vị khách có nhu cầu. Với những thao tác đơn giản, bạn có thể tạo tin - tìm kiếm - kết nối để trải nghiệm lâu dài với dịch vụ."/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -80,16 +80,10 @@
                     android:textSize="14sp"
                     android:paddingStart="5dp"
                     android:paddingTop="5dp"
-                    android:text="Người mua đồng ý rằng cô ấy/anh ấy chỉ có thể yêu cầu trả hàng và hoàn tiền trong các trường hợp sau:"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/sourcesanspro_regular"
-                    android:textColor="#93766E"
-                    android:textSize="14sp"
-                    android:paddingStart="10dp"
-                    android:text="- Người mua đã thanh toán nhưng (i) không nhận được sản phẩm, hoặc (ii) không nhận được toàn bộ các sản phẩm đã đặt, hoặc (iii) nhận được sản phẩm là hàng giả, hàng nhái;"
-                    android:justificationMode="inter_word"
+                    android:text="  Thông tin cá nhân của thành viên trên MORO được cam kết bảo mật tuyệt đối theo chính sách bảo vệ thông tin cá nhân của MORO. Việc thu thập và sử dụng thông tin của mỗi thành viên chỉ được thực hiện khi có sự đồng ý của khách hàng đó trừ những trường hợp pháp luật có quy định khác.
+
+
+Bảo mật tuyệt đối mọi thông tin giao dịch trực tuyến của Thành viên bao gồm thông tin hóa đơn kế toán chứng từ số hóa tại khu vực dữ liệu trung tâm an toàn cấp 1 của MORO."
                     />
                 <TextView
                     android:layout_width="match_parent"
@@ -97,35 +91,19 @@
                     android:fontFamily="@font/sourcesanspro_regular"
                     android:textColor="#93766E"
                     android:textSize="14sp" android:paddingStart="10dp"
-                    android:text="- Sản phẩm bị lỗi hoặc bị hư hại trong quá trình vận chuyển;"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/sourcesanspro_regular"
-                    android:textColor="#93766E"
-                    android:textSize="14sp"
-                    android:paddingStart="10dp"
-                    android:justificationMode="inter_word"
-                    android:text="- Người bán giao sai sản phẩm cho Người mua (ví dụ: sai kích cỡ, sai màu sắc, v.vv...);"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/sourcesanspro_regular"
-                    android:textColor="#93766E"
-                    android:textSize="14sp"
-                    android:paddingStart="10dp"
-                    android:justificationMode="inter_word"
-                    android:text="- Sản phẩm Người mua nhận được khác biệt một cách rõ rệt so với thông tin mà Người bán cung cấp trong mục mô tả sản phẩm;"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/sourcesanspro_regular"
-                    android:textColor="#93766E"
-                    android:textSize="14sp"
-                    android:paddingStart="10dp"
-                    android:justificationMode="inter_word"
+                    android:text="  Không sử dụng, không chuyển giao, cung cấp hay tiết lộ cho bên thứ 3 nào về thông tin cá nhân của thành viên khi không có sự cho phép đồng ý từ thành viên
 
-                    android:text="- Sản phẩm bị trả lại không phải là Sản phẩm hạn chế trả hàng;"/>
+Trong trường hợp máy chủ lưu trữ thông tin bị hacker tấn công dẫn đến mất mát dữ liệu cá nhân thành viên, MORO sẽ có trách nhiệm thông báo vụ việc cho cơ quan chức năng điều tra xử lý kịp thời và thông báo cho thành viên được biết.
+;"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="10dp"
+                    android:justificationMode="inter_word"
+                    android:text=  "Ban quản lý MORO yêu cầu các cá nhân khi đăng ký là thành viên, phải cung cấp đầy đủ thông tin cá nhân có liên quan như: Họ và tên, địa chỉ liên lạc, email, điện thoại, địa chỉ …., và chịu trách nhiệm về tính pháp lý của những thông tin trên. Ban quản lý MORO không chịu trách nhiệm cũng như không giải quyết mọi khiếu nại có liên quan đến quyền lợi của Thành viên đó nếu xét thấy tất cả thông tin cá nhân của thành viên đó cung cấp khi đăng ký ban đầu là không chính xác."/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -143,7 +121,41 @@
                     android:paddingStart="5dp"
                     android:paddingTop="5dp"
                     android:justificationMode="inter_word"
-                    android:text="Người mua đồng ý rằng cô ấy/anh ấy chỉ có thể yêu cầu trả hàng và hoàn tiền trong các trường hợp sau:"
+                    android:text="  Chúng tôi luôn hoan nghênh các ý kiến đóng góp, liên hệ và phản hồi thông tin từ khách hàng về “Chính sách bảo mật."
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="5dp"
+                    android:paddingTop="5dp"
+                    android:justificationMode="inter_word"
+                    android:text="   Nếu khách hàng có những thắc mắc liên quan xin vui lòng liên hệ:"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="5dp"
+                    android:paddingTop="5dp"
+                    android:justificationMode="inter_word"
+                    android:text="   - Địa chỉ Email: cskh.moro@gmail.com"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="5dp"
+                    android:paddingTop="5dp"
+                    android:justificationMode="inter_word"
+                    android:text="   - Điện thoại: 1900 636 999"
                     />
             </LinearLayout>
         </ScrollView>
