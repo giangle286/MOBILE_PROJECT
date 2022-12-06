@@ -15,7 +15,7 @@ public class Activity_Profile_Detail4_Logout extends AppCompatActivity {
         //dialog logout
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Logout");
-        builder.setIcon(android.R.drawable.ic_dialog_alert);
+        builder.setIcon(android.R.drawable.ic_dialog_info);
         builder.setMessage("Bạn có chắc muốn đăng xuất khỏi tài khoản hiện tại không?");
         builder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
             @Override

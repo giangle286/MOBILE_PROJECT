@@ -54,6 +54,7 @@ public class BlogAdapter extends BaseAdapter {
             holder.txtTimeBlog=view.findViewById(R.id.txt_timeBlog);
             holder.txtTitleBlog=view.findViewById(R.id.txt_titleBlog);
             holder.imvReact=view.findViewById(R.id.imv_ic_tim);
+            holder.imvCmt=view.findViewById(R.id.imv_ic_cmt);
             view.setTag(holder);
         }
         else {
@@ -80,13 +81,22 @@ public class BlogAdapter extends BaseAdapter {
             }
         });
 
+        holder.imvCmt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent= new Intent(view.getContext(), Activity_Blog_Details.class);
+                view.getContext().startActivity(intent);
+
+            }
+        });
 
         return view;
     }
     public static class ViewHolder {
         TextView txtTitleBlog, txtTimeBlog;
         ImageView imvBlog;
-        ImageView imvReact;
+        ImageView imvReact, imvCmt;
 
     }
 

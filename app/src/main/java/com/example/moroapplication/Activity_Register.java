@@ -61,12 +61,13 @@ public class Activity_Register extends AppCompatActivity {
                             if(pass.equals(repass)){
 
                                 // lưu vào database Account
+                                //ACCDATA ==> INSERT
                                 Boolean insert = DB.insertAccData(name, email, pass, address, phone);
                                 if(insert==true){
                                     Toast.makeText(Activity_Register.this, "Đăng ký tài khoản thành công", Toast.LENGTH_SHORT).show();
 
                                     // Chuyển qua màn hình trang chủ
-                                    Intent intent = new Intent(Activity_Register.this,HomePage.class);
+                                    Intent intent = new Intent(Activity_Register.this,Activity_Homepage.class);
                                     startActivity(intent);
 
                                 }else{

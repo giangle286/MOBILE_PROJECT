@@ -120,42 +120,6 @@ public class AccountDB extends SQLiteOpenHelper {
         }
         return userid;
     }
-        //set default image for user
-    public boolean setdefaultimage(String avatar){
-        SQLiteDatabase MyDB = this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(COL_IMAGE, avatar);
-        contentValues.put(COL_IMAGE, "drawable-v24/img_ava_male.webp");
-        Cursor cursor = MyDB.rawQuery("SELECT * FROM " + TBL_NAME + " WHERE " + COL_EMAIL + " = ?", new String[]{avatar});
-        if (cursor.getCount() > 0) {
-            long result = MyDB.update(TBL_NAME, contentValues, "UserEmail=?", new String[]{avatar});
-            if (result == -1)
-                return false;
-            else
-                return true;
-        } else {
-            return false;
-        }
-    }
-    //update information
-    public boolean updateinformation(String email, String username, String phone, String address, String avatar){
-        SQLiteDatabase MyDB = this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(COL_USERNAME, username);
-        contentValues.put(COL_PHONE, phone);
-        contentValues.put(COL_ADDRESS, address);
-        contentValues.put(COL_IMAGE, avatar);
-        contentValues.put(COL_EMAIL, email);
-        Cursor cursor = MyDB.rawQuery("SELECT * FROM " + TBL_NAME + " WHERE " + COL_EMAIL + " = ?", new String[]{email});
-        if (cursor.getCount() > 0) {
-            long result = MyDB.update(TBL_NAME, contentValues, "UserEmail=?", new String[]{email});
-            if (result == -1)
-                return false;
-            else
-                return true;
-        } else {
-            return false;
-        }
 
-    }
+
 }

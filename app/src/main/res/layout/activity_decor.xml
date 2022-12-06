@@ -20,17 +20,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="5dp"
+        android:padding="2dp"
         android:weightSum="10">
-        <android.widget.SearchView
-            android:layout_marginStart="10dp"
-
-            android:layout_marginEnd="10dp"
-            android:id="@+id/srv_Blog" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"
-            android:queryHint="Nhập tìm kiếm"
-            android:iconifiedByDefault="false"
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/simpleSearchView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <EditText
+            android:id="@+id/inputSearch"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search ...."
             android:background="@drawable/stroke"
-            />
+            android:layout_weight="9">
+        </EditText>
 
     </LinearLayout>
 

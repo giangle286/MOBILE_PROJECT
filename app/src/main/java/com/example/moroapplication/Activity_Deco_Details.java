@@ -56,7 +56,7 @@ public class Activity_Deco_Details extends AppCompatActivity {
         linkView();
         addEvent();
         initAdapter();
-//        initData();
+        initData();
 
         mViewPager=findViewById(R.id.deco_viewpager);
         mCircleIndicator=findViewById(R.id.deco_circle_indicator);
@@ -111,18 +111,18 @@ public class Activity_Deco_Details extends AppCompatActivity {
     }
 
     private void linkView() {
-        //edtCmt=findViewById(R.id.edt_cmt);
+        edtCmt=findViewById(R.id.edt_Cmt);
         imvSendCmt=findViewById(R.id.imv_SendCmt);
         lvCmt=findViewById(R.id.lvCmt);
     }
 
-//    private void initData() {
-//        decoComment=new ArrayList<>();
-//        decoComment.add(new DecoComment("Rất xinh đẹp tuyệt vời","Linh Anh"));
-//        decoComment.add(new DecoComment("Xịn quá ạ","Khánh Ngân"));
-//        decoCommentAdapter=new DecoCommentAdapter(Activity_Deco_Details.this,R.layout.item_cmt,decoComment);
-//        lvCmt.setAdapter(decoCommentAdapter);
-//    }
+    private void initData() {
+        decoComment=new ArrayList<>();
+        decoComment.add(new DecoComment("Rất xinh đẹp tuyệt vời","Linh Anh"));
+        decoComment.add(new DecoComment("Xịn quá ạ","Khánh Ngân"));
+        decoCommentAdapter=new DecoCommentAdapter(Activity_Deco_Details.this,R.layout.item_cmt,decoComment);
+        lvCmt.setAdapter(decoCommentAdapter);
+    }
 
     private void addEvent() {
         imvSendCmt.setOnClickListener(new View.OnClickListener() {
