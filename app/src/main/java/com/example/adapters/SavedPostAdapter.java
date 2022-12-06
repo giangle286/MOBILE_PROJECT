@@ -15,7 +15,8 @@ import java.util.List;
 public class SavedPostAdapter {
     Activity_Profile_Detail3 activity_profile_detail3;
     int item_layout;
-    List<Deco> deco;
+    //list savedPost
+    List<Deco> decoList;
 //
 //    public SavedPostAdapter(Activity_Profile_Detail3 activity_profile_detail3, int item_layout, List<Deco> deco) {
 //        this.activity_profile_detail3 = activity_profile_detail3;
