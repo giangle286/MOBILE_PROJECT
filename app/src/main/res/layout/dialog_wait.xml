@@ -16,11 +16,7 @@
         android:text="Chờ một chút nhé!"
         android:textColor="@color/black"
         android:textSize="24sp" />
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/img_logo"
-        ></ImageView>
+
 
 
     <!--    <com.airbnb.lottie.LottieAnimationView-->
