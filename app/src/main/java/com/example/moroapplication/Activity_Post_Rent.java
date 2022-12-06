@@ -146,7 +146,7 @@ public class Activity_Post_Rent extends AppCompatActivity {
        btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    Intent intent = new Intent(Activity_Post_Rent.this,Homepage.class);
+                    Intent intent = new Intent(Activity_Post_Rent.this,Activity_Homepage.class);
                     startActivity(intent);
             }
         });
@@ -173,7 +173,7 @@ public class Activity_Post_Rent extends AppCompatActivity {
                 Mota  =edtDescribe.getText().toString();
 
                 if(!Loaibai.equals("") && !Ten.equals("") && !SDT.equals("") && !Dientich.equals("") && !SoNguoi.equals("") && !Diachi.equals("") && !Mucgia.equals("") && !Mota.equals("") ) {
-                    boolean flag = db.insertData(Loaibai, Ten, SDT, Mucgia, Diachi, Dientich, SoNguoi, Mota, convertImage());
+                    boolean flag = db.insertData(Loaibai, Ten, SDT, Mucgia, Diachi, Dientich, Double.valueOf(SoNguoi), Mota, convertImage());
                 }
             }
         });

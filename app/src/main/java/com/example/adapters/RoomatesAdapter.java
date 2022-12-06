@@ -47,7 +47,7 @@ public class RoomatesAdapter extends RecyclerView.Adapter<RoomatesAdapter.Roomat
         if(roomates==null){
             return;
         }
-        holder.txt_TitleRoomates.setText(roomates.getTypeRoomates()+","+roomates.getNobRoomates()+","+roomates.getGenderRoomates()+","+roomates.getAddressRoomates());
+        holder.txt_TitleRoomates.setText(roomates.getTitleRoomates());
         holder.txtAddressRoomates.setText(roomates.getAddressRoomates());
         holder.txtSquareRoomates.setText(roomates.getSquareRoomates());
         holder.imgRoomates.setImageResource(roomates.getResourceImage());

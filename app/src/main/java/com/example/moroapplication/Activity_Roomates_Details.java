@@ -38,7 +38,7 @@ public class Activity_Roomates_Details extends AppCompatActivity {
         }
         Roomates roomates= (Roomates) bundle.get("object_roomates");
         TextView txtTitleRoomates=findViewById(R.id.txt_TitleRoomatesDetails);
-        txtTitleRoomates.setText(roomates.getTypeRoomates()+","+roomates.getNobRoomates()+","+roomates.getGenderRoomates()+","+roomates.getAddressRoomates());
+        txtTitleRoomates.setText(roomates.getTitleRoomates());
 
 
         TextView txtNameRoomates=findViewById(R.id.txt_NameRoomatesDetails);
