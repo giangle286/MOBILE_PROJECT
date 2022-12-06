@@ -144,7 +144,7 @@
                     android:paddingTop="5dp"
                     android:justificationMode="inter_word"
                     android:text="Người mua đồng ý rằng cô ấy/anh ấy chỉ có thể yêu cầu trả hàng và hoàn tiền trong các trường hợp sau:"
-                    android:textAlignment=""/>
+/>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

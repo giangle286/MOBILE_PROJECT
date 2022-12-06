@@ -33,7 +33,7 @@ public class Activity_Payment_Success extends AppCompatActivity {
         binding.btnBackHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Activity_Payment_Success.this, HomePage.class);
+                Intent intent = new Intent(Activity_Payment_Success.this, Activity_Homepage.class);
                 startActivity(intent);
             }
         });

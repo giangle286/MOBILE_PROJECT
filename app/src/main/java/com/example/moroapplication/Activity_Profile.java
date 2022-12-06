@@ -31,7 +31,7 @@ public class Activity_Profile extends AppCompatActivity {
                     case R.id.action_account:
                         return true;
                     case R.id.action_homepage:
-                        startActivity(new Intent(getApplicationContext(),HomePage.class));
+                        startActivity(new Intent(getApplicationContext(),Activity_Homepage.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.action_news:

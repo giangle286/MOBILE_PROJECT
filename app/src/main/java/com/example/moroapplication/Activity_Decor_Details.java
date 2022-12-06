@@ -3,10 +3,12 @@ package com.example.moroapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -29,6 +31,7 @@ public class Activity_Decor_Details extends AppCompatActivity {
     ListView lvCmt;
     DecoCommentAdapter decoCommentAdapter;
     ArrayList<DecoComment> decoComment;
+    ImageButton imb_DecoBack;
 
 
     @Override
@@ -83,12 +86,27 @@ public class Activity_Decor_Details extends AppCompatActivity {
                 decoCommentAdapter=new DecoCommentAdapter(Activity_Decor_Details.this,R.layout.item_cmt,decoComment);
                 lvCmt.setAdapter(decoCommentAdapter);
             }
+
         });
+
+//        imb_DecoBack.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(Activity_Decor_Details.this,Activity_Decor.class);
+//                startActivity(intent);
+//            }
+//        });
+
     }
 
     private void initAdapter() {
 
     }
+
+
+
+
+
 }
 
 

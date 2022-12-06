@@ -105,7 +105,7 @@ public class Activity_Login extends AppCompatActivity {
                 results();
                 
                 Toast.makeText(Activity_Login.this, "Đăng nhập thành công!", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(Activity_Login.this, HomePage.class);
+                Intent intent = new Intent(Activity_Login.this, Activity_Homepage.class);
                 startActivity(intent);
             }
 
@@ -162,7 +162,7 @@ public class Activity_Login extends AppCompatActivity {
         SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
         String checkbox = preferences.getString("remember", "");
         if (checkbox.equals("true")){
-            Intent intent = new Intent(Activity_Login.this, HomePage.class);
+            Intent intent = new Intent(Activity_Login.this, Activity_Homepage.class);
             startActivity(intent);
         }else if(checkbox.equals("false")){
             Toast.makeText(Activity_Login.this, "Hãy đăng nhập", Toast.LENGTH_SHORT).show();
@@ -183,7 +183,7 @@ public class Activity_Login extends AppCompatActivity {
                     Boolean checkemailpass = DB.checkemailpassword(email,pass);
                     if(checkemailpass==true){
                         Toast.makeText(Activity_Login.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(Activity_Login.this, HomePage.class);
+                        Intent intent = new Intent(Activity_Login.this, Activity_Homepage.class);
                         startActivity(intent);
                         //remember me
                         SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);

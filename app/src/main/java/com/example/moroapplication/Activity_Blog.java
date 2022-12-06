@@ -70,7 +70,7 @@ public class Activity_Blog extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.action_homepage:
-                        startActivity(new Intent(getApplicationContext(),HomePage.class));
+                        startActivity(new Intent(getApplicationContext(),Activity_Homepage.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.action_news:
