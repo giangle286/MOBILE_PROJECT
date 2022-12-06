@@ -92,7 +92,13 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-      
+      <activity
+            android:name=".Activity_Latest_DecorPost"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".Activity_Lastest_Post"
             android:exported="false">
