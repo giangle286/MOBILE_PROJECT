@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -37,8 +39,22 @@ public class Activity_Blog extends AppCompatActivity {
         setContentView(binding.getRoot());
         loadData();
         bottomNav();
-//        selectedbeer();
+        selectedBlog();
 
+    }
+
+    private void selectedBlog() {
+        binding.lvBlogsample.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent= new Intent(Activity_Blog.this,Activity_Blog_Details.class);
+                Blog b = blogList.get(i);
+                intent.putExtra("selectimage", b.getImageBlog());
+                intent.putExtra("selecttitle",b.getTitleBlog());
+                intent.putExtra("selectime",b.getTimeBlog());
+                startActivity(intent);
+            }
+        });
     }
 
     private void bottomNav() {
@@ -58,10 +74,11 @@ public class Activity_Blog extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.action_news:
-                        startActivity(new Intent(getApplicationContext(),Activity_Blog.class));
-                        overridePendingTransition(0,0);
+
                         return true;
                     case R.id.action_decor:
+                        startActivity(new Intent(getApplicationContext(),Activity_Deco.class));
+                        overridePendingTransition(0,0);
                         return true;
                     case R.id.action_notification:
                         startActivity(new Intent(getApplicationContext(),Activity_Notification.class));

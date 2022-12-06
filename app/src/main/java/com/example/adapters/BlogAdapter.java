@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.models.Blog;
+import com.example.moroapplication.Activity_Blog_Details;
 import com.example.moroapplication.R;
 
 import java.util.List;
@@ -80,15 +81,16 @@ public class BlogAdapter extends BaseAdapter {
             }
         });
 
-//        holder.imvCmt.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//                Intent intent= new Intent(view.getContext(),CommentBlog.class);
-//                view.getContext().startActivity(intent);
-//
-//            }
-//        });
+        holder.imvCmt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent= new Intent(view.getContext(), Activity_Blog_Details.class);
+                view.getContext().startActivity(intent);
+
+            }
+        });
+
         return view;
     }
     public static class ViewHolder {
