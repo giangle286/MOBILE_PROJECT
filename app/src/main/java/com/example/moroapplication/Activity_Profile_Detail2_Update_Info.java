@@ -2,7 +2,9 @@ package com.example.moroapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class Activity_Profile_Detail2_Update_Info extends AppCompatActivity {
 
@@ -11,5 +13,5 @@ public class Activity_Profile_Detail2_Update_Info extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_detail2_update_info);
     }
-
 }
+
