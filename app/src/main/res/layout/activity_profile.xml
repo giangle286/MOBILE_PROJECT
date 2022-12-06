@@ -8,11 +8,10 @@
     android:orientation="vertical">
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imv_ava"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:src="@drawable/img_ava"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
         tools:ignore="MissingClass">
     </de.hdodenhof.circleimageview.CircleImageView>
 
@@ -73,14 +72,138 @@
             android:textSize="20sp">
         </TextView>
     </LinearLayout>
-
-    <ListView
-        android:id="@+id/lv_profile_function"
-        android:layout_width="wrap_content"
-        android:layout_height="282dp"
+    <LinearLayout
+        android:id="@+id/Layout_AccountManagement"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
         android:layout_weight="1"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"></ListView>
+        android:layout_marginLeft="20dp"
+        >
+
+        <TextView
+            android:id="@+id/txtSettingProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Quản lý tài khoản"
+            android:textColor="#5B4944"
+            android:textSize="15sp" />
+
+        <ImageButton
+            android:id="@+id/imbGoSettingProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            android:src="@drawable/ic_baseline_navigate_next_24" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Layout_Saved"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/txt_Saved"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Xem mục lưu trữ"
+            android:textColor="#5B4944"
+            android:textSize="15sp"
+            android:layout_marginLeft="20dp"/>
+
+        <ImageButton
+            android:id="@+id/imbgoSaved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            android:src="@drawable/ic_baseline_navigate_next_24"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Layout_Report"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+
+        <TextView
+            android:id="@+id/txt_Report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Xem báo cáo"
+            android:textColor="#5B4944"
+            android:textSize="15sp"
+            android:layout_marginLeft="20dp"/>
+
+        <ImageButton
+            android:id="@+id/imbGoReport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            android:src="@drawable/ic_baseline_navigate_next_24"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Layout_Logout"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/txt_Logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Đăng xuất"
+            android:textColor="#5B4944"
+            android:textSize="15sp"
+            android:layout_marginLeft="20dp"/>
+
+        <ImageButton
+            android:id="@+id/imbGoLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            android:src="@drawable/ic_baseline_navigate_next_24"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Layout_Policy"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/txt_policy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Chính sách và Trợ giúp"
+            android:textColor="#5B4944"
+            android:textSize="15sp"
+            android:layout_marginLeft="20dp"/>
+
+        <ImageButton
+            android:id="@+id/imbGoPolicy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            android:src="@drawable/ic_baseline_navigate_next_24"/>
+    </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/menu_navigation"
@@ -93,6 +216,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu">
+        app:menu="@menu/bottom_nav_menu"
+        android:layout_gravity="bottom">
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 </LinearLayout>
