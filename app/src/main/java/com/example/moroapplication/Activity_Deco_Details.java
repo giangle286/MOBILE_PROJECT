@@ -111,7 +111,7 @@ public class Activity_Deco_Details extends AppCompatActivity {
     }
 
     private void linkView() {
-        //edtCmt=findViewById(R.id.edt_cmt);
+        edtCmt=findViewById(R.id.edt_Cmt);
         imvSendCmt=findViewById(R.id.imv_SendCmt);
         lvCmt=findViewById(R.id.lvCmt);
     }
