@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -22,7 +23,7 @@ import java.util.List;
 public class Activity_Message_Details extends AppCompatActivity {
 
     private EditText edtMessage;
-    private ImageButton imbSend;
+    private ImageButton imbSend, imbBack;
 
     private RecyclerView rcvMessage;
     private MessageAdapter messageAdapter;
@@ -33,9 +34,11 @@ public class Activity_Message_Details extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message_details);
 
+
         edtMessage = findViewById(R.id.edt_message);
         imbSend = findViewById(R.id.imb_send);
         rcvMessage = findViewById(R.id.rcv_message);
+        imbBack = findViewById(R.id.imb_backMessage);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         rcvMessage.setLayoutManager(linearLayoutManager);
@@ -45,6 +48,14 @@ public class Activity_Message_Details extends AppCompatActivity {
         messageAdapter.setData(messageList);
 
         rcvMessage.setAdapter(messageAdapter);
+
+        imbBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Activity_Message_Details.this,Activity_Message.class);
+                startActivity(intent);
+            }
+        });
 
         imbSend.setOnClickListener(new View.OnClickListener() {
             @Override
