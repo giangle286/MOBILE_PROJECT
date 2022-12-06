@@ -27,6 +27,20 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+          <activity
+            android:name=".Activity_MotelRoom"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity_MotelRoom_Details"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".Activity_Choose_Service_Roommate"
             android:exported="false">
@@ -275,7 +289,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".HomePage"
+            android:name=".Activity_Homepage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
