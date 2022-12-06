@@ -25,7 +25,7 @@ import me.relex.circleindicator.CircleIndicator;
 
 public class Activity_Decor_Details extends AppCompatActivity {
     private EditText edtCmt;
-    private ImageView imvSendCmt;
+    private ImageView imvSendCmt, imvFavorite;
     ListView lvCmt;
     DecoCommentAdapter decoCommentAdapter;
     ArrayList<DecoComment> decoComment;
@@ -42,6 +42,8 @@ public class Activity_Decor_Details extends AppCompatActivity {
         }
         Decor decor= (Decor) bundle.get("object_decor");
 
+        imvFavorite = findViewById(R.id.imv_Favorite);
+
         ImageView img_DecoDetails=findViewById(R.id.img_DecoDetails);
         img_DecoDetails.setImageResource(decor.getResourceImage());
         TextView txtNameDecor=findViewById(R.id.txt_NameDecorDetails);
@@ -55,9 +57,20 @@ public class Activity_Decor_Details extends AppCompatActivity {
         linkView();
         addEvent();
         initAdapter();
-        initData();
 
 
+
+        imvFavorite.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                ImageView imvReact=view.findViewById(R.id.imv_Favorite);
+                imvReact.setSelected(!imvReact.isSelected());
+                if(imvReact.isSelected()){
+                    imvReact.setImageResource(R.drawable.ic_baseline_favoritefull_24);
+                }else {
+                    imvReact.setImageResource(R.drawable.ic_baseline_favorite_border_24);
+                }
+            }
+        });
 
     }
     private void linkView() {
@@ -66,13 +79,7 @@ public class Activity_Decor_Details extends AppCompatActivity {
         lvCmt=findViewById(R.id.lvCmt);
     }
 
-    private void initData() {
-        decoComment=new ArrayList<>();
-        decoComment.add(new DecoComment("Rất xinh đẹp tuyệt vời","Linh Anh"));
-        decoComment.add(new DecoComment("Xịn quá ạ","Khánh Ngân"));
-        decoCommentAdapter=new DecoCommentAdapter(Activity_Decor_Details.this,R.layout.item_cmt,decoComment);
-        lvCmt.setAdapter(decoCommentAdapter);
-    }
+
 
     private void addEvent() {
         imvSendCmt.setOnClickListener(new View.OnClickListener() {

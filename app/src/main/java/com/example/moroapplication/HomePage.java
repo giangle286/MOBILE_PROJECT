@@ -53,7 +53,7 @@ public class HomePage extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.action_decor:
-                        startActivity(new Intent(getApplicationContext(),Activity_Deco.class));
+                        startActivity(new Intent(getApplicationContext(),Activity_Decor.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.action_notification:
