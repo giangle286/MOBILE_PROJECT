@@ -5,6 +5,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -23,6 +24,11 @@ import java.util.List;
 import me.relex.circleindicator.CircleIndicator;
 
 public class Activity_Decor_Details extends AppCompatActivity {
+    private EditText edtCmt;
+    private ImageView imvSendCmt;
+    ListView lvCmt;
+    DecoCommentAdapter decoCommentAdapter;
+    ArrayList<DecoComment> decoComment;
 
 
     @Override
@@ -46,9 +52,43 @@ public class Activity_Decor_Details extends AppCompatActivity {
         txtTimeDecor.setText(decor.getTimeDecor());
 
 
+        linkView();
+        addEvent();
+        initAdapter();
+        initData();
+
+
+
+    }
+    private void linkView() {
+        edtCmt=findViewById(R.id.edt_Cmt);
+        imvSendCmt=findViewById(R.id.imv_SendCmt);
+        lvCmt=findViewById(R.id.lvCmt);
     }
 
+    private void initData() {
+        decoComment=new ArrayList<>();
+        decoComment.add(new DecoComment("Rất xinh đẹp tuyệt vời","Linh Anh"));
+        decoComment.add(new DecoComment("Xịn quá ạ","Khánh Ngân"));
+        decoCommentAdapter=new DecoCommentAdapter(Activity_Decor_Details.this,R.layout.item_cmt,decoComment);
+        lvCmt.setAdapter(decoCommentAdapter);
+    }
 
+    private void addEvent() {
+        imvSendCmt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                comment=new ArrayList<>();
+                decoComment.add(new DecoComment(edtCmt.getText().toString(),"Tiểu Vy"));
+                decoCommentAdapter=new DecoCommentAdapter(Activity_Decor_Details.this,R.layout.item_cmt,decoComment);
+                lvCmt.setAdapter(decoCommentAdapter);
+            }
+        });
+    }
 
+    private void initAdapter() {
 
+    }
 }
+
+
