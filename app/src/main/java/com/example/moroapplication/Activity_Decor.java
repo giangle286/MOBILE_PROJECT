@@ -1,11 +1,14 @@
 package com.example.moroapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,6 +16,7 @@ import android.widget.TextView;
 import com.example.adapters.DecorAdapter;
 import com.example.models.Deco;
 import com.example.models.Decor;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +36,7 @@ public class Activity_Decor extends AppCompatActivity implements View.OnClickLis
         btnVintage=findViewById(R.id.btn_Vintage);
         btnToiGian=findViewById(R.id.btn_ToiGian);
         btnHienDai=findViewById(R.id.btn_HienDai);
+        bottomNav();
 
 
 
@@ -49,6 +54,40 @@ public class Activity_Decor extends AppCompatActivity implements View.OnClickLis
 
 
 
+    }
+
+    private void bottomNav() {
+        BottomNavigationView bottomNavigationView = findViewById(R.id.menu_navigation);
+        bottomNavigationView.setSelectedItemId(R.id.action_notification);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.action_account:
+                        startActivity(new Intent(getApplicationContext(),Activity_Profile.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.action_homepage:
+                        startActivity(new Intent(getApplicationContext(),HomePage.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.action_news:
+                        startActivity(new Intent(getApplicationContext(),Activity_Blog.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.action_decor:
+                        return true;
+                    case R.id.action_notification:
+                        startActivity(new Intent(getApplicationContext(),Activity_Notification.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                }
+
+                return false;
+            }
+        });
     }
 
     private List<Decor> getListDecor() {

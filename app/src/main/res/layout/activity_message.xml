@@ -41,7 +41,7 @@
       android:layout_height="wrap_content"
       android:padding="5dp"
       android:divider="@drawable/divider"
-      android:background="#F8B68C"/>
+     />
 
 
 </LinearLayout>
