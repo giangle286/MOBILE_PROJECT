@@ -9,6 +9,7 @@ public class Roomates implements Serializable {
 
     private int TypeRoomates;
     private String nameRoomates;
+    private String titleRoomates;
     private String phoneRoomates;
     private String addressRoomates;
     private String squareRoomates;
@@ -17,8 +18,9 @@ public class Roomates implements Serializable {
     private String describeRoomates;
     private int resourceImage;
 
-    public Roomates(int typeRoomates, String nameRoomates, String phoneRoomates, String addressRoomates, String squareRoomates, Double nobRoomates, String genderRoomates, String describeRoomates, int resourceImage) {
+    public Roomates(int typeRoomates, String titleRoomates,String nameRoomates, String phoneRoomates, String addressRoomates, String squareRoomates, Double nobRoomates, String genderRoomates, String describeRoomates, int resourceImage) {
         TypeRoomates = typeRoomates;
+        this.titleRoomates= titleRoomates;
         this.nameRoomates = nameRoomates;
         this.phoneRoomates = phoneRoomates;
         this.addressRoomates = addressRoomates;
@@ -35,6 +37,13 @@ public class Roomates implements Serializable {
 
     public void setTypeRoomates(int typeRoomates) {
         TypeRoomates = typeRoomates;
+    }
+    public String getTitleRoomates() {
+        return titleRoomates;
+    }
+
+    public void setTitleRoomates(String titleRoomates) {
+        this.titleRoomates = titleRoomates;
     }
 
     public String getNameRoomates() {

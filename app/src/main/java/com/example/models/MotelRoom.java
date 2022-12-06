@@ -8,6 +8,7 @@ public class MotelRoom implements Serializable {
 
 
     private int TypeMotelRoom;
+    private String titleMotelRoom;
     private String nameMotelRoom;
     private String phoneMotelRoom;
     private String addressMotelRoom;
@@ -17,9 +18,11 @@ public class MotelRoom implements Serializable {
     private String describeMotelRoom;
     private int resourceImage;
 
-    public MotelRoom(int typeMotelRoom, String nameMotelRoom, String phoneMotelRoom, String addressMotelRoom, String squareMotelRoom, Double nobMotelRoom, String priceMotelRoom, String describeMotelRoom, int resourceImage) {
+    public MotelRoom(int typeMotelRoom,  String titleMotelRoom,String nameMotelRoom, String phoneMotelRoom, String addressMotelRoom, String squareMotelRoom, Double nobMotelRoom, String priceMotelRoom, String describeMotelRoom, int resourceImage) {
         TypeMotelRoom= typeMotelRoom;
+
         this.nameMotelRoom = nameMotelRoom;
+        this.titleMotelRoom = nameMotelRoom;
         this.phoneMotelRoom = phoneMotelRoom;
         this.addressMotelRoom = addressMotelRoom;
         this.squareMotelRoom= squareMotelRoom;
@@ -35,6 +38,13 @@ public class MotelRoom implements Serializable {
 
     public void setTypeMotelRoom(int typeMotelRoom) {
         TypeMotelRoom = typeMotelRoom;
+    }
+    public String getTitleMotelRoom() {
+        return titleMotelRoom;
+    }
+
+    public void setTitleMotelRoom(String titleMotelRoom) {
+        this.titleMotelRoom = titleMotelRoom;
     }
 
     public String getNameMotelRoom() {

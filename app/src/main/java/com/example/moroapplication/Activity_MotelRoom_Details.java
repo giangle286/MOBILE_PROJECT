@@ -38,7 +38,7 @@ public class Activity_MotelRoom_Details extends AppCompatActivity {
         }
         MotelRoom motelroom= (MotelRoom) bundle.get("object_motelroom");
         TextView txtTitleMotelRoom=findViewById(R.id.txt_TitleMotelRoomDetails);
-        txtTitleMotelRoom.setText(motelroom.getTypeMotelRoom()+","+motelroom.getNobMotelRoom()+","+motelroom.getPriceMotelRoom()+","+motelroom.getAddressMotelRoom());
+        txtTitleMotelRoom.setText(motelroom.getTitleMotelRoom());
 
 
         TextView txtNameRoomates=findViewById(R.id.txt_NameMotelRoomDetails);

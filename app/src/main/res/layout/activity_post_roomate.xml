@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Activity_Deco_Post">
+    tools:context=".Activity_Post_Roomate">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
         >
 
         <ImageButton
-            android:id="@+id/btn_Decoback"
+            android:id="@+id/btn_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_back"
@@ -28,7 +28,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Đăng mẫu thiết kế"
+            android:text="Đăng tin"
             android:textColor="#993B22"
             android:layout_gravity="center"
             android:textSize="20dp"
@@ -36,7 +36,7 @@
             android:layout_weight="8"></TextView>
 
         <Button
-            android:id="@+id/btnDecoTest"
+            android:id="@+id/btnTest"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
@@ -56,17 +56,18 @@
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginHorizontal="16dp"
-            android:hint="Phong cách thiết kế"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+            android:hint="Hình thức">
 
             <AutoCompleteTextView
-                android:id="@+id/txtDecoType"
+                android:id="@+id/txtType"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="41dp"
                 android:inputType="none" />
         </com.google.android.material.textfield.TextInputLayout>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
@@ -75,46 +76,120 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Người đăng bài"
+        android:text="Người cho thuê"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:layout_marginLeft="30dp"></TextView>
 
     <EditText
-        android:id="@+id/edtDecoUser"
+        android:id="@+id/edtName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:hint="Họ và tên"></EditText>
 
-
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tiêu đề"
+        android:text="Số điện thoại"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:layout_marginLeft="30dp"></TextView>
 
     <EditText
-        android:id="@+id/edtDecoName"
+        android:id="@+id/edtSdt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:hint="Tiêu đề"></EditText>
+        android:hint="Số điện thoại liên hệ"></EditText>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Mô tả"
+        android:text="Địa chỉ"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginLeft="30dp"></TextView>
+
+    <EditText
+        android:id="@+id/edtAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:hint="Địa chỉ chi tiết"></EditText>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TableRow>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Diện tích"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:layout_marginLeft="16dp"></TextView>
+
+            <EditText
+                android:id="@+id/edtSquare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:hint="Diện tích (m2)"></EditText>
+
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tìm"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:layout_marginLeft="5dp"></TextView>
+
+            <EditText
+                android:id="@+id/edtNumofPeople"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                ></EditText>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="người"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:layout_marginLeft="4dp"></TextView>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Giới tính"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginLeft="30dp"></TextView>
+    <EditText
+        android:id="@+id/edtGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:hint="Giới tính"
+        ></EditText>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mô tả yêu cầu"
         android:layout_marginTop="5dp"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:layout_marginLeft="30dp"></TextView>
 
     <EditText
-        android:id="@+id/edtDecoDescribe"
+        android:id="@+id/edtDescribe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
@@ -131,16 +206,15 @@
         android:layout_marginLeft="30dp"></TextView>
 
     <ImageView
-        android:id="@+id/imvDecoImage"
+        android:id="@+id/imvImage"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="50dp"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginBottom="10dp"
         android:background="@drawable/stroke"></ImageView>
 
 
     <Button
-        android:id="@+id/btnDecoImage"
+        android:id="@+id/btnImage"
         android:text="Thêm hình ảnh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

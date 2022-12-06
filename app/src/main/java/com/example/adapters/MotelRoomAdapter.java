@@ -48,7 +48,7 @@ public class MotelRoomAdapter extends RecyclerView.Adapter<MotelRoomAdapter.Mote
         if(motelRoom==null){
             return;
         }
-        holder.txt_TitleMotelRoom.setText(motelRoom.getTypeMotelRoom()+","+motelRoom.getNobMotelRoom()+","+motelRoom.getPriceMotelRoom()+","+motelRoom.getAddressMotelRoom());
+        holder.txt_TitleMotelRoom.setText(motelRoom.getNameMotelRoom());
         holder.txtPriceMotelRoom.setText(motelRoom.getPriceMotelRoom());
         holder.txtAddressMotelRoom.setText(motelRoom.getAddressMotelRoom());
         holder.txtSquareMotelRoom.setText(motelRoom.getSquareMotelRoom());

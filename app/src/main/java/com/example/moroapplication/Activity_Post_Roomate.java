@@ -30,37 +30,45 @@ import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
-public class Activity_Deco_Post extends AppCompatActivity {
-
-    String[] items = {"Vintage", "Tối giản", "Hiện đại"};
+public class Activity_Post_Roomate extends AppCompatActivity {
+    String[] items = {"Phòng trọ", "Căn hộ", "Nhà nguyên căn"};
     AutoCompleteTextView autoTxtType;
     ArrayAdapter<String> adapterItems;
     BottomSheetDialog sheetDialog;
 
-    ImageView imvDecoImage;
-    Button btnDecoImage, btnDecoTest, btnCamera, btnGallery;
-    ImageButton btn_Decoback;
-    EditText edtDecoUser, edtDecoName, edtDecoDescribe;
+    ImageView imvImage;
+    Button btnImage, btnTest, btnCamera, btnGallery;
+    ImageButton btnBack;
+    EditText edtName, edtSdt, edtAddress, edtSquare, edtNumofPeople, edtGender, edtDescribe;
 
     ActivityResultLauncher<Intent> activityResultLauncher;
     boolean IsCamera;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_deco_post);
+        setContentView(R.layout.activity_post_roomate);
 
-        imvDecoImage = findViewById(R.id.imvDecoImage);
-        edtDecoUser = findViewById(R.id.edtDecoUser);
-        edtDecoName = findViewById(R.id.edtDecoName);
-        edtDecoDescribe = findViewById(R.id.edtDecoDescribe);
+        setContentView(R.layout.activity_post_rent);
 
-        btnDecoImage = findViewById(R.id.btnDecoImage);
-        btnDecoTest = findViewById(R.id.btnDecoTest);
-        btn_Decoback = findViewById(R.id.btn_Decoback);
+        edtName = findViewById(R.id.edtName);
+        edtAddress = findViewById(R.id.edtAddress);
+        edtSdt = findViewById(R.id.edtSdt);
+        edtGender = findViewById(R.id.edtGender);
+        edtDescribe = findViewById(R.id.edtDescribe);
+        edtSquare = findViewById(R.id.edtSquare);
+        edtNumofPeople = findViewById(R.id.edtNumofPeople);
 
-        autoTxtType = findViewById(R.id.txtDecoType);
+        btnTest = findViewById(R.id.btnTest);
+        btnBack = findViewById(R.id.btn_back);
+        btnImage = findViewById(R.id.btnImage);
+
+        imvImage = findViewById(R.id.imvImage);
+
+        autoTxtType = findViewById(R.id.txtType);
         adapterItems = new ArrayAdapter<String>(this, R.layout.list_item_post_rent, items);
         autoTxtType.setAdapter(adapterItems);
+
 
         // Drop down list
         autoTxtType.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -78,14 +86,14 @@ public class Activity_Deco_Post extends AppCompatActivity {
                 if (result.getResultCode() == RESULT_OK && result.getData() != null) {
                     if (IsCamera) {
                         Bitmap bitmap = (Bitmap) result.getData().getExtras().get("data");
-                        imvDecoImage.setImageBitmap(bitmap);
+                        imvImage.setImageBitmap(bitmap);
                     } else {
                         Uri uri = result.getData().getData();
                         if (uri != null) {
                             try {
                                 InputStream inputStream = getContentResolver().openInputStream(uri);
                                 Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
-                                imvDecoImage.setImageBitmap(bitmap);
+                                imvImage.setImageBitmap(bitmap);
                             } catch (FileNotFoundException e) {
                                 e.printStackTrace();
                             }
@@ -99,67 +107,6 @@ public class Activity_Deco_Post extends AppCompatActivity {
         createBottomSheet();
         addEvents();
     }
-
-    private void addEvents() {
-        // button back
-        btn_Decoback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Activity_Deco_Post.this, Activity_Homepage.class);
-                startActivity(intent);
-            }
-        });
-
-        // button image
-        btnDecoImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                sheetDialog.show();
-            }
-        });
-
-        // button test
-        btnDecoTest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String type = autoTxtType.getText().toString();
-                String user = edtDecoUser.getText().toString();
-                String name = edtDecoName.getText().toString();
-                String describe = edtDecoDescribe.getText().toString();
-
-
-
-                // kiểm tra dữ liệu đầy đủ chưa
-                if (!type.equals("") && !user.equals("") && !name.equals("") && !describe.equals("") && convertPhoto(imvDecoImage) != null) {
-
-                    // đóng gói và truyền dữ liệu qua Activity_Latest_Post by bundle
-                    Intent intent = new Intent(Activity_Deco_Post.this, Activity_Latest_DecorPost.class);
-                    Bundle bundle = new Bundle();
-                    bundle.putString("type", type);
-                    bundle.putString("user", user);
-                    bundle.putString("name", name);
-                    bundle.putString("describe", describe);
-                    bundle.putByteArray("image", convertPhoto(imvDecoImage));
-                    intent.putExtras(bundle);
-                    startActivity(intent);
-
-                } else {
-                    Toast.makeText(Activity_Deco_Post.this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-
-    }
-
-    private byte[] convertPhoto(ImageView imv) {
-        BitmapDrawable bitmapDrawable = (BitmapDrawable) imv.getDrawable();
-        Bitmap bitmap = bitmapDrawable.getBitmap();
-
-        ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
-        return stream.toByteArray();
-    }
-
 
     // choose camera or gallery
     private void createBottomSheet() {
@@ -193,6 +140,75 @@ public class Activity_Deco_Post extends AppCompatActivity {
 
             sheetDialog = new BottomSheetDialog(this);
             sheetDialog.setContentView(view);
+
         }
     }
+
+    private void addEvents() {
+
+        // button back
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Activity_Post_Roomate.this, Activity_Homepage.class);
+                startActivity(intent);
+            }
+        });
+
+        // button image
+        btnImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sheetDialog.show();
+            }
+        });
+
+        // button test
+        btnTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String type = autoTxtType.getText().toString();
+                String name = edtName.getText().toString();
+                String sdt = edtSdt.getText().toString();
+                String gender = edtGender.getText().toString();
+                String address = edtAddress.getText().toString();
+                String square = edtSquare.getText().toString();
+                Double numofpeople = Double.valueOf(edtNumofPeople.getText().toString());
+                String describe = edtDescribe.getText().toString();
+
+                // kiểm tra dữ liệu đầy đủ chưa
+
+                if (!type.equals("") && !name.equals("") && !sdt.equals("") && !gender.equals("") && !address.equals("") && !square.equals("") && !describe.equals("") && !numofpeople.equals(0) && convertPhoto(imvImage) != null) {
+
+                    // đóng gói và truyền dữ liệu qua Activity_Latest_Post by bundle
+                    Intent intent = new Intent(Activity_Post_Roomate.this, Activity_Lastest_Post.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("type", type);
+                    bundle.putString("name", name);
+                    bundle.putString("sdt", sdt);
+                    bundle.putString("gender", gender);
+                    bundle.putString("address", address);
+                    bundle.putString("square", square);
+                    bundle.putDouble("numofpeople", numofpeople);
+                    bundle.putString("describe", describe);
+                    bundle.putByteArray("image", convertPhoto(imvImage));
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+
+                } else {
+                    Toast.makeText(Activity_Post_Roomate.this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+    }
+    private byte[] convertPhoto(ImageView imv) {
+        BitmapDrawable bitmapDrawable = (BitmapDrawable) imv.getDrawable();
+        Bitmap bitmap = bitmapDrawable.getBitmap();
+
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+        return stream.toByteArray();
+    }
+
 }
