@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Activity_Post_Rent">
+    tools:context=".Activity_Post_Roomate">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -62,7 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginHorizontal="16dp"
-            android:hint="Loại nhà cho thuê">
+            android:hint="Hình thức">
 
             <AutoCompleteTextView
                 android:id="@+id/txtType"
@@ -103,22 +103,6 @@
         android:layout_marginHorizontal="16dp"
         android:hint="Số điện thoại liên hệ"></EditText>
 
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Mức giá"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:layout_marginLeft="30dp"></TextView>
-
-    <EditText
-        android:id="@+id/edtPrice"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:hint="Giá"></EditText>
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -139,25 +123,24 @@
         android:layout_height="wrap_content"
         >
         <TableRow>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Diện tích"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:layout_marginLeft="16dp"></TextView>
-
-        <EditText
-            android:id="@+id/edtSquare"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:hint="Diện tích (m2)"></EditText>
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Phòng"
+                android:text="Diện tích"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:layout_marginLeft="16dp"></TextView>
+
+            <EditText
+                android:id="@+id/edtSquare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:hint="Diện tích (m2)"></EditText>
+
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tìm"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:layout_marginLeft="5dp"></TextView>
@@ -181,11 +164,25 @@
 
     </TableLayout>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Giới tính"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginLeft="30dp"></TextView>
+    <EditText
+        android:id="@+id/edtGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:hint="Giới tính"
+        ></EditText>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Mô tả"
+        android:text="Mô tả yêu cầu"
         android:layout_marginTop="5dp"
         android:textColor="@color/black"
         android:textSize="20dp"
@@ -216,12 +213,12 @@
         android:background="@drawable/stroke"></ImageView>
 
 
-        <Button
-            android:id="@+id/btnImage"
-            android:text="Thêm hình ảnh"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginRight="10dp"></Button>
+    <Button
+        android:id="@+id/btnImage"
+        android:text="Thêm hình ảnh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"></Button>
 
 </LinearLayout>

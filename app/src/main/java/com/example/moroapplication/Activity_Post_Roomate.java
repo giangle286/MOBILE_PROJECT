@@ -30,8 +30,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
-public class Activity_Post_Rent extends AppCompatActivity {
-
+public class Activity_Post_Roomate extends AppCompatActivity {
     String[] items = {"Phòng trọ", "Căn hộ", "Nhà nguyên căn"};
     AutoCompleteTextView autoTxtType;
     ArrayAdapter<String> adapterItems;
@@ -40,7 +39,7 @@ public class Activity_Post_Rent extends AppCompatActivity {
     ImageView imvImage;
     Button btnImage, btnTest, btnCamera, btnGallery;
     ImageButton btnBack;
-    EditText edtName, edtSdt, edtAddress, edtSquare, edtNumofPeople, edtPrice, edtDescribe;
+    EditText edtName, edtSdt, edtAddress, edtSquare, edtNumofPeople, edtGender, edtDescribe;
 
     ActivityResultLauncher<Intent> activityResultLauncher;
     boolean IsCamera;
@@ -48,12 +47,14 @@ public class Activity_Post_Rent extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_post_roomate);
+
         setContentView(R.layout.activity_post_rent);
 
         edtName = findViewById(R.id.edtName);
         edtAddress = findViewById(R.id.edtAddress);
         edtSdt = findViewById(R.id.edtSdt);
-        edtPrice = findViewById(R.id.edtPrice);
+        edtGender = findViewById(R.id.edtGender);
         edtDescribe = findViewById(R.id.edtDescribe);
         edtSquare = findViewById(R.id.edtSquare);
         edtNumofPeople = findViewById(R.id.edtNumofPeople);
@@ -149,7 +150,7 @@ public class Activity_Post_Rent extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Activity_Post_Rent.this, HomePage.class);
+                Intent intent = new Intent(Activity_Post_Roomate.this, HomePage.class);
                 startActivity(intent);
             }
         });
@@ -169,7 +170,7 @@ public class Activity_Post_Rent extends AppCompatActivity {
                 String type = autoTxtType.getText().toString();
                 String name = edtName.getText().toString();
                 String sdt = edtSdt.getText().toString();
-                String price = edtPrice.getText().toString();
+                String gender = edtGender.getText().toString();
                 String address = edtAddress.getText().toString();
                 String square = edtSquare.getText().toString();
                 Double numofpeople = Double.valueOf(edtNumofPeople.getText().toString());
@@ -177,15 +178,15 @@ public class Activity_Post_Rent extends AppCompatActivity {
 
                 // kiểm tra dữ liệu đầy đủ chưa
 
-                if (!type.equals("") && !name.equals("") && !sdt.equals("") && !price.equals("") && !address.equals("") && !square.equals("") && !describe.equals("") && !numofpeople.equals(0) && convertPhoto(imvImage) != null) {
+                if (!type.equals("") && !name.equals("") && !sdt.equals("") && !gender.equals("") && !address.equals("") && !square.equals("") && !describe.equals("") && !numofpeople.equals(0) && convertPhoto(imvImage) != null) {
 
                     // đóng gói và truyền dữ liệu qua Activity_Latest_Post by bundle
-                    Intent intent = new Intent(Activity_Post_Rent.this, Activity_Lastest_Post.class);
+                    Intent intent = new Intent(Activity_Post_Roomate.this, Activity_Lastest_Post.class);
                     Bundle bundle = new Bundle();
                     bundle.putString("type", type);
                     bundle.putString("name", name);
                     bundle.putString("sdt", sdt);
-                    bundle.putString("price", price);
+                    bundle.putString("gender", gender);
                     bundle.putString("address", address);
                     bundle.putString("square", square);
                     bundle.putDouble("numofpeople", numofpeople);
@@ -195,25 +196,19 @@ public class Activity_Post_Rent extends AppCompatActivity {
                     startActivity(intent);
 
                 } else {
-                    Toast.makeText(Activity_Post_Rent.this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Activity_Post_Roomate.this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
     }
-
     private byte[] convertPhoto(ImageView imv) {
-            BitmapDrawable bitmapDrawable = (BitmapDrawable) imv.getDrawable();
-            Bitmap bitmap = bitmapDrawable.getBitmap();
+        BitmapDrawable bitmapDrawable = (BitmapDrawable) imv.getDrawable();
+        Bitmap bitmap = bitmapDrawable.getBitmap();
 
-            ByteArrayOutputStream stream = new ByteArrayOutputStream();
-            bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
-            return stream.toByteArray();
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+        return stream.toByteArray();
     }
 
 }
-
-
-
-
-
