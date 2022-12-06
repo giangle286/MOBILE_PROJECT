@@ -95,7 +95,7 @@ public class Activity_Blog_Details extends AppCompatActivity {
     private void initData() {
         decoComment=new ArrayList<>();
         decoComment.add(new DecoComment("Bài viết thật hữu ích","Giang Nguyễn"));
-        decoComment.add(new DecoComment("Xịn quá ạ","Khánh Lê"));
+        //decoComment.add(new DecoComment("Xịn quá ạ","Khánh Lê"));
         decoCommentAdapter=new DecoCommentAdapter(Activity_Blog_Details.this,R.layout.item_cmt,decoComment);
         lvCmt.setAdapter(decoCommentAdapter);
         

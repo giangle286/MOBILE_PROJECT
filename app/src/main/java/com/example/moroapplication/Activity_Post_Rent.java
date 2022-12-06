@@ -143,13 +143,13 @@ public class Activity_Post_Rent extends AppCompatActivity {
     }
 
     private void addEvents() {
-        btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                    Intent intent = new Intent(Activity_Post_Rent.this,Activity_Homepage.class);
-                    startActivity(intent);
-            }
-        });
+//        btnBack.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                    Intent intent = new Intent(Activity_Post_Rent.this,Activity_Homepage.class);
+//                    startActivity(intent);
+//            }
+//        });
         btnImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

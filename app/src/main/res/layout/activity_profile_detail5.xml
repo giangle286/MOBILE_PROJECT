@@ -89,8 +89,7 @@
                     android:textSize="14sp"
                     android:paddingStart="10dp"
                     android:text="- Người mua đã thanh toán nhưng (i) không nhận được sản phẩm, hoặc (ii) không nhận được toàn bộ các sản phẩm đã đặt, hoặc (iii) nhận được sản phẩm là hàng giả, hàng nhái;"
-                    android:justificationMode="inter_word"
-                    />
+                    android:justificationMode="inter_word" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -143,8 +142,7 @@
                     android:paddingStart="5dp"
                     android:paddingTop="5dp"
                     android:justificationMode="inter_word"
-                    android:text="Người mua đồng ý rằng cô ấy/anh ấy chỉ có thể yêu cầu trả hàng và hoàn tiền trong các trường hợp sau:"
-/>
+                    android:text="Người mua đồng ý rằng cô ấy/anh ấy chỉ có thể yêu cầu trả hàng và hoàn tiền trong các trường hợp sau:" />
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
