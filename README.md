@@ -1,13 +1,5 @@
 # MOBILE_PROJECT
-Nhóm 8 Đồ án cuối kỳ - Môn học Phát triển thương mại di động
-
-Thông tin làm việc:
-Các bạn nhận task => nêu ý kiến => thực hiện => feedback.
-Cố gắng đúng tiến độ nhé. 
-
-# cú pháp commit/ push lên: Tên trang/ tên luồng logic_Chức năng. Ví dụ: Blogs_add button nha mn
-
-# Mỗi khi đẩy lên: chọn nhánh của tên mình để đẩy => nhấn pull request để review rùi merge nếu k có conflict nha
+Đây là dự án xây dựng ứng dụng di động trong lĩnh vực bất động sản. Sản phẩm là một ứng dụng trung gian cho phép đăng tải và tìm kiếm phòng trọ/ căn họ.. nơi ở nói chung.
 
 Trải nghiệm app
 
